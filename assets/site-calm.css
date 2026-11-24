@@ -837,3 +837,36 @@ main h2,main h1:not(.hello-text){font-weight:700!important}
 
 /* Hagai 24.11: no line above the first step (תכנון) */
 .method .layer.l1{border-top:0!important}
+
+/* ===== Version 2 (24.11): fixes after the design review ===== */
+/* invitations to get in touch */
+.v2-cta{display:inline-block;font-family:var(--he-display)!important;font-size:1rem;line-height:1.2;color:#1E1F1A!important;text-decoration:none!important;border:1px solid #1E1F1A;padding:.75em 1.5em;background:transparent;transition:background .25s,color .25s,border-color .25s}
+.v2-cta:hover,.v2-cta:focus-visible{background:#566A4B;border-color:#566A4B;color:#fff!important}
+.hello .v2-cta:hover,.hello .v2-cta:focus-visible{background:#1E1F1A;border-color:#1E1F1A;color:#FDE86B!important}
+.hello-cta{margin:clamp(20px,3vw,32px) 0 0}
+.team-cta{margin-top:26px}
+.home-grid-more{text-align:center}
+/* one heading size for every section; place labels on photos a little larger */
+main h2.split{font-size:clamp(2rem,1.3rem + 2.4vw,2.8rem)!important}
+main .museum{font-size:.82rem!important}
+/* mobile: folded menu, short header, WhatsApp button that steps aside */
+.menu-btn{display:none}
+@media (max-width:860px){
+  .top .wrap{grid-template-columns:1fr auto auto!important;column-gap:10px!important;padding-block:10px!important}
+  .top>.wrap>.btn{grid-column:2!important;grid-row:1!important;white-space:nowrap;font-size:.78rem!important;padding:.55em .9em!important}
+  .menu-btn{display:inline-flex;grid-column:3;grid-row:1;flex-direction:column;justify-content:center;gap:5px;width:40px;height:40px;padding:0 10px;background:none;border:1px solid #1E1F1A;cursor:pointer}
+  .menu-btn span{display:block;height:1.5px;background:#1E1F1A;transition:transform .25s,opacity .25s}
+  .top.menu-open .menu-btn span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  .top.menu-open .menu-btn span:nth-child(2){opacity:0}
+  .top.menu-open .menu-btn span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .top .nav1 .main{display:none!important}
+  .top.menu-open .nav1 .main{display:flex!important;flex-direction:column;flex-wrap:nowrap!important;gap:0!important;padding:6px 0 14px!important;max-height:calc(100svh - 70px);overflow-y:auto!important}
+  .top.menu-open .nav1 .main>li>a{display:block;padding:11px 0;font-size:1.05rem}
+  .top.menu-open .nav1 .drop{display:block!important;position:static!important;border:0!important;box-shadow:none!important;background:none!important;padding:0 16px 8px!important;min-width:0!important}
+  .top.menu-open .nav1 .drop a{font-size:.95rem;padding:7px 0}
+  a.wa{width:48px!important;height:48px!important;transition:opacity .3s,transform .3s}
+  a.wa svg{width:24px!important;height:24px!important}
+  a.wa.wa-away{opacity:0;transform:translateY(16px);pointer-events:none}
+}
+@media (max-width:480px){.top .wm i,.top .wm span{display:none}}
+@media (max-width:860px){body:has(.top.menu-open) a.wa{opacity:0;pointer-events:none}}

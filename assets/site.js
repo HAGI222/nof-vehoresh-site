@@ -326,3 +326,28 @@
   }
   addEventListener('load', () => ScrollTrigger.refresh());
 })();
+
+// Version 2 (24.11): mobile menu button, and a WhatsApp button that steps aside on the opening screen and at the bottom
+(function () {
+  const header = document.querySelector('.top'), wrap = header && header.querySelector('.wrap'), nav = header && header.querySelector('.nav1');
+  if (wrap && nav && !wrap.querySelector('.menu-btn')) {
+    const b = document.createElement('button');
+    b.type = 'button'; b.className = 'menu-btn'; b.setAttribute('aria-expanded', 'false'); b.setAttribute('aria-label', 'תפריט');
+    b.innerHTML = '<span></span><span></span><span></span>';
+    wrap.appendChild(b);
+    b.addEventListener('click', () => { const o = header.classList.toggle('menu-open'); b.setAttribute('aria-expanded', o); });
+    nav.addEventListener('click', e => { if (e.target.closest('.drop a')) header.classList.remove('menu-open'); });
+  }
+  const wa = document.querySelector('a.wa');
+  if (!wa) return;
+  const hello = document.querySelector('.hello'), foot = document.querySelector('footer');
+  const upd = () => {
+    let hide = false;
+    if (innerWidth <= 860) {
+      if (hello && hello.getBoundingClientRect().bottom > innerHeight * 0.35) hide = true;
+      if (foot && foot.getBoundingClientRect().top < innerHeight - 40) hide = true;
+    }
+    wa.classList.toggle('wa-away', hide);
+  };
+  addEventListener('scroll', upd, { passive: true }); addEventListener('resize', upd); upd();
+})();

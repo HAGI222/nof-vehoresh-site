@@ -1,0 +1,839 @@
+/* ===== "Studio" layer (Hagai 24.11): calm, clean, professional, like a landscape architecture office.
+   Loaded last; it quiets the crate-and-planter look without touching the content. ===== */
+:root{
+  --cream:#F7F5F0; --cream-2:#ECE8DF; --white:#FFFFFF; --line:#E3DED3;
+  --ink:#24251F; --ink-2:#6B6A60;
+  --soil:#2C2E27; --soil-2:#3A3D33; --soil-ink:#EFEDE6;
+  --leaf:#4E5F37; --leaf-hi:#5D7041; --leaf-deep:#4E5F37;
+  --stamp:#8C8577; --pipe:#B8B1A3;
+  --he-display:"Carmela","Rubik",system-ui,sans-serif;
+  --he-stamp:"Carmela","Rubik",system-ui,sans-serif;
+}
+body{background:var(--cream);background-image:none;font-size:clamp(1.02rem,.98rem + .2vw,1.12rem);line-height:1.75;color:var(--ink)}
+.humus,.method-more,.l6{background-image:none!important}
+.white{background:var(--white);background-image:none}
+
+/* type: one quiet family, light weight, generous spacing */
+h1,h2,h3{font-family:var(--he-display);font-weight:400;line-height:1.12;letter-spacing:-.01em;color:var(--ink)}
+h2{font-size:clamp(2rem,1.4rem + 2.2vw,3.2rem)}
+.hero h1,.page-hero h1,.toc-hero h1,.hero-over h1{font-size:clamp(2.4rem,1.6rem + 3vw,4.2rem);font-weight:400}
+.hero h1 .green,.hero-over h1 .green,.gal-hero h1 .green{color:var(--ink)}
+.eyebrow{font-family:var(--he-body);font-size:.82rem;letter-spacing:.12em;color:var(--ink-2);font-weight:600}
+.lede{font-size:clamp(1.05rem,1rem + .3vw,1.2rem);color:var(--ink-2)}
+.humus h2,.humus h3{color:var(--soil-ink)}
+section.pad{padding-block:clamp(90px,11vw,160px)}
+
+/* no decoration: drip line, seal, tilts, shadows, paper prints */
+#drip,.seal{display:none!important}
+.frame{background:none!important;padding:0!important;box-shadow:none!important;border-radius:0;transform:none!important}
+.frame img{box-shadow:none;border-radius:0}
+.collage .main,.collage .small,.itai-photo .main,.itai-photo .small,.svc-main .frame,.sketch,.plan,.block .frame,.course .frame,.room-panel .frame,.journal .frame,.proj .frame,.crop .frame,.team-photo,.contact-photo .frame{transform:none!important}
+.collage .small,.itai-photo .small{border:6px solid var(--cream)}
+.crop:nth-child(odd) .frame,.crop:nth-child(even) .frame{transform:none}
+.stamp{position:static!important;display:block;font-family:var(--he-body);font-size:.8rem;letter-spacing:.04em;color:var(--ink-2);border:0;padding:8px 0 0;transform:none;mix-blend-mode:normal;white-space:normal;background:none!important;box-shadow:none}
+.frame .photo-note{margin:6px 0 0;font-size:.85rem}
+.slide .cap{background:rgba(255,255,255,.92);box-shadow:none;border-radius:0}
+.slide .cap b{font-family:var(--he-body);font-weight:600;color:var(--ink);font-size:.85rem}
+.quote,.tcard,.price,.pathcard,.learn a.path,.toc .sk,.toc li:nth-child(even) .sk{transform:none!important;box-shadow:none!important}
+.quote{background:none;border-top:1px solid var(--line);padding:22px 0 0}
+.quote p{font-family:var(--he-body);font-weight:400;font-size:1.15rem;line-height:1.7;color:var(--ink)}
+.tcard,.price,.pathcard,.learn a.path{border:1px solid var(--line)}
+.toc .sk{background:var(--white);border:1px solid var(--line)}
+.toc .place{font-weight:400;font-size:clamp(2.2rem,1.4rem + 3vw,4rem);color:var(--ink)}
+.toc .pn,.toc-sub{font-family:var(--he-body);color:var(--ink-2);font-size:.95rem;font-weight:400}
+.toc-row:hover .place{color:var(--leaf);transform:none}
+.toc-peek{transform:none!important;box-shadow:0 20px 40px -24px rgba(0,0,0,.35)}
+.story .poetic{font-weight:400;font-size:clamp(1.9rem,1.4rem + 1.6vw,2.8rem);color:var(--ink)}
+.story .vh{font-weight:600;font-size:.95rem;color:var(--ink-2);letter-spacing:.02em}
+.story .motto{font-weight:400}
+
+/* buttons and links: flat, quiet */
+.btn{border-radius:0;box-shadow:none;font-weight:600;letter-spacing:.01em;padding:.9em 1.5em}
+.btn:hover{transform:none;box-shadow:none}
+.btn-leaf{background:var(--leaf);color:#fff}
+.btn-leaf:hover{background:var(--leaf-hi)}
+.btn-soil{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--ink)}
+.btn-soil:hover{background:var(--ink);color:#fff}
+.humus .btn-soil{color:var(--soil-ink);box-shadow:inset 0 0 0 1px var(--soil-ink);background:transparent}
+.link{font-weight:400;text-decoration-thickness:1px}
+.wa{background:var(--leaf);color:#fff}
+
+/* header: plain, thin line */
+.top.scrolled,.top.solid{background:rgba(247,245,240,.97);box-shadow:0 1px 0 var(--line)}
+.nav{font-weight:400}
+.dd ul{border-radius:0;box-shadow:0 1px 0 var(--line),0 16px 30px -20px rgba(0,0,0,.25)}
+
+/* the coloured soil-profile bands become quiet rows */
+.method,.l1,.l2,.l3,.l4,.l5{background:var(--cream)!important;color:var(--ink)!important}
+.l6,.method-more{background:var(--cream)!important;color:var(--ink)!important}
+.layer{border-top:1px solid var(--line);padding-block:clamp(26px,3vw,40px)}
+.layer h3{font-size:clamp(1.6rem,1.2rem + 1vw,2.2rem);color:var(--ink)!important}
+.layer .n{font-family:var(--he-body);font-size:.9rem;color:var(--ink-2);opacity:1}
+.layer p.get b{font-family:var(--he-body);font-weight:600}
+.method-more .link{color:var(--ink)}
+.threads i span{background:var(--cream);color:var(--ink-2);font-family:var(--he-body)}
+.threads i{background:repeating-linear-gradient(to bottom,var(--line) 0 10px,transparent 10px 16px)}
+.threads i:nth-child(2){background:repeating-linear-gradient(to bottom,var(--pipe) 0 4px,transparent 4px 10px)}
+.threads i:nth-child(3){background:var(--ink-2)}
+.threads-key i::before{background:var(--line)}
+.learn{background:var(--cream-2);color:var(--ink)}
+.learn .eyebrow{color:var(--ink-2)!important}
+
+/* dark sections: flat, calm */
+.humus{background-color:var(--soil)}
+.projects .proj h3 small,.proj blockquote{opacity:.8}
+.tags li{border-width:1px;border-radius:0}
+.chips span{border-radius:0}
+.contact input,.contact select,.contact textarea{border-bottom-width:1px}
+
+/* plan and sketches */
+.plan .bub ellipse{fill:rgba(78,95,55,.08);stroke:var(--ink-2);stroke-width:1.1}
+.plan .bub.on ellipse{fill:var(--leaf);stroke:var(--leaf)}
+.plan .bub.on text{fill:#fff}
+.plist li{border-radius:0;border-color:var(--line);color:var(--ink-2)}
+.rooms-mini a{border-radius:0;border:1px solid var(--line);background:none;font-weight:400}
+
+/* clients, facts */
+.client b{font-family:var(--he-display);font-weight:400;font-size:1.6rem}
+.clients,.client{border-width:1px}
+.facts li,.values div{border-top:1px solid var(--line)}
+.facts b{font-weight:400;font-size:1.7rem}
+.values h3{font-size:1.7rem}
+
+/* before/after tags */
+.ba{box-shadow:none;border-radius:0}
+.ba .tag{border-radius:0;font-weight:600}
+.ba .tag.a{background:rgba(255,255,255,.9);color:var(--ink)}
+
+/* todo chips stay visible (prototype) but quieter */
+.todo{background:#F0E3C2;color:#6B5A2E;font-weight:600}
+.proj h3{font-size:clamp(1.5rem,1.2rem + .9vw,2rem);font-weight:400}
+.proj h3 small{font-size:.9rem}
+.ba-item h3,.inv h3,.svc-main h3,.learn h2,.journal h3,.jlist h3,.person h3,.course h3,.pathcard h2,.block h2,.early h3,.advice blockquote,.faq summary,.room-panel h3{font-weight:400}
+.inv h3{font-size:clamp(1.5rem,1.2rem + 1vw,2rem)}
+.advice blockquote{font-size:clamp(2rem,1.4rem + 2.4vw,3.4rem);line-height:1.15}
+.advice blockquote em{color:var(--leaf)}
+.faq summary{font-size:clamp(1.2rem,1rem + .6vw,1.5rem);line-height:1.4}
+
+/* no motion: one still opening image, static project grid, scrollable strips (Hagai 24.11) */
+.slides.still .slide{position:absolute;inset:0;opacity:1;transition:none}
+.slides.still .slide img{transform:none;transition:none}
+.projects .track{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:clamp(28px,3vw,48px);width:auto;padding-inline:var(--gutter);max-width:var(--max);margin-inline:auto}
+.projects .proj{width:auto}
+.projects .track-end{grid-column:1 / -1;width:auto;padding:0}
+.strip-viewport{overflow-x:auto!important}
+.tile img{transform:none!important}
+.room-panel.on{animation:none}
+
+/* opening photo like a gallery wall: no panel over the photo, a small museum label in the corner (Hagai 24.11) */
+.show-hero .slides{height:clamp(420px,82vh,900px)}
+.hero-over{position:static!important;background:none!important;padding:clamp(40px,5vw,72px) 0 0!important}
+.hero-over .in{background:none!important;box-shadow:none!important;max-width:760px;padding:0!important;border-radius:0}
+.hero-over h1{font-size:clamp(2rem,1.4rem + 2.2vw,3.2rem)}
+.museum{position:absolute;bottom:clamp(14px,2vw,26px);inset-inline-start:clamp(14px,2vw,26px);background:rgba(255,255,255,.94);padding:7px 11px 8px;font-family:var(--he-body);font-size:.72rem;line-height:1.35;color:var(--ink);letter-spacing:.02em;max-width:220px}
+.museum b{display:block;font-weight:600}
+.museum span{color:var(--ink-2)}
+@media (max-width:860px){.show-hero .slides{height:auto}.slides.still .slide{position:relative;height:62vh}.slides::before{display:none}}
+@media (max-width:860px){.hero-over .wrap{padding-inline:var(--gutter)!important}.hero-over{padding-top:32px!important}}
+
+/* text wordmark instead of the logo image (Hagai 24.11) */
+.brand{text-decoration:none;color:var(--ink)}
+.wm{display:inline-flex;align-items:baseline;gap:.45em;font-family:"Carmela","Rubik",serif;font-size:clamp(1.35rem,1.1rem + .7vw,1.8rem);line-height:1;white-space:nowrap;color:var(--ink)}
+.wm b{font-weight:700}
+.wm i{font-style:normal;color:var(--ink-2)}
+.wm span{font-weight:400}
+.wm-foot{color:var(--soil-ink);margin:0 0 12px;font-size:1.6rem}
+.wm-foot i{color:var(--soil-ink);opacity:.6}
+@media (max-width:420px){.wm{font-size:1.2rem;gap:.35em}}
+
+/* menu always open: no burger; on narrow screens the menu is a second, scrollable row (Hagai 24.11) */
+.top{position:sticky!important;background:rgba(247,245,240,.97)!important;box-shadow:0 1px 0 var(--line)!important}
+.show-hero{padding-top:0!important}
+.hero,.page-hero,.toc-hero{padding-top:clamp(40px,5vw,72px)!important}
+.stub{padding-top:clamp(50px,6vw,90px)!important}
+@media (min-width:0px){
+  .burger{display:none!important}
+  .top .wrap{flex-wrap:wrap;min-height:0;row-gap:0;padding-block:12px 0}
+  .top>.wrap>.btn{display:inline-flex!important;margin-inline-start:auto;padding:.5em .9em;font-size:.85rem;min-height:38px}
+  .nav{position:static!important;display:flex!important;flex-direction:row!important;align-items:center!important;flex-basis:100%;order:3;gap:18px;padding:10px 0 12px!important;background:none!important;overflow-x:auto;overflow-y:hidden;font-size:.92rem;scrollbar-width:none}
+  .nav::-webkit-scrollbar{display:none}
+  .nav>a,.dd>button{font-family:var(--he-body)!important;font-weight:400!important;font-size:.92rem!important;line-height:1.4!important;white-space:nowrap}
+  .dd{display:contents}
+  .dd>button{display:none}
+  .dd ul{display:contents!important;list-style:none}
+  .dd li a{padding:6px 0;white-space:nowrap;background:none}
+  .nav .btn{display:none!important}
+}
+@media (max-width:520px){.top>.wrap>.btn svg{display:none}}
+
+@media (min-width:861px){.nav{overflow:visible;justify-content:flex-start;gap:26px;padding-bottom:14px!important}.top .wrap{padding-block:16px 0}}
+.museum{top:clamp(14px,2vw,24px);bottom:auto;left:clamp(14px,2vw,24px);right:auto;inset-inline-start:auto;color:var(--ink-2);font-size:.7rem;padding:6px 10px}
+/* opening photo: wide crop like Hagai's reference (24.11) */
+.show-hero .slides.still{height:auto!important;aspect-ratio:1478/760;max-height:none}
+.slides.still .slide{position:absolute;inset:0;height:100%!important}
+.slides.still .slide img{object-position:50% 72%}
+@media (max-width:860px){.show-hero .slides.still{aspect-ratio:4/3}}
+
+/* two-level menu: five quiet main items + a small submenu row for the current/hovered section (Hagai 24.11) */
+.top .wrap{display:grid!important;grid-template-columns:auto 1fr auto;align-items:center;column-gap:clamp(20px,3vw,48px);padding-block:18px 0!important;min-height:0}
+.top .brand{grid-column:1;grid-row:1}
+.top>.wrap>.btn{grid-column:3;grid-row:1;margin:0!important}
+.nav2{display:contents}
+.nav2 .main{grid-column:2;grid-row:1;list-style:none;margin:0;padding:0;display:flex;justify-content:center;gap:clamp(18px,2.6vw,40px)}
+.nav2 .main a{text-decoration:none;font-size:.95rem;letter-spacing:.03em;color:var(--ink);padding-block:6px;border-bottom:1px solid transparent;transition:border-color .25s}
+.nav2 .main a:hover,.nav2 .main li.on a{border-bottom-color:var(--ink)}
+.nav2 .subs{grid-column:1 / -1;grid-row:2;min-height:40px;border-top:1px solid var(--line);margin-top:16px;display:flex;align-items:center;justify-content:center}
+.nav2 .sub{list-style:none;margin:0;padding:10px 0;display:flex;flex-wrap:wrap;justify-content:center;gap:4px 26px}
+.nav2 .sub[hidden]{display:none}
+.nav2 .sub a{text-decoration:none;font-size:.82rem;letter-spacing:.03em;color:var(--ink-2)}
+.nav2 .sub a:hover,.nav2 .sub a[aria-current]{color:var(--ink)}
+.nav2 .sub a[aria-current]{border-bottom:1px solid var(--ink-2)}
+@media (max-width:860px){
+  .top .wrap{grid-template-columns:1fr auto;padding-block:12px 0!important}
+  .nav2 .main{grid-column:1 / -1;grid-row:2;justify-content:flex-start;overflow-x:auto;gap:22px;padding:12px 0 2px;scrollbar-width:none}
+  .nav2 .main a{white-space:nowrap}
+  .nav2 .subs{grid-row:3;margin-top:8px;justify-content:flex-start;overflow-x:auto;scrollbar-width:none;min-height:0}
+  .nav2 .sub{flex-wrap:nowrap;gap:20px;padding:8px 0}
+  .nav2 .sub a{white-space:nowrap}
+}
+
+/* rooms as a plain list (no plan drawing), photos instead of sketches */
+.rooms-list{display:flex;flex-direction:column;align-items:stretch;gap:0;position:static!important;border-top:1px solid var(--line)}
+.rooms-list .bub{all:unset;cursor:pointer;display:block;padding:14px 4px;border-bottom:1px solid var(--line);font-family:var(--he-display);font-size:clamp(1.3rem,1.1rem + .6vw,1.7rem);color:var(--ink-2);transition:color .2s}
+.rooms-list .bub:hover,.rooms-list .bub.on{color:var(--ink)}
+.rooms-list .bub.on{padding-inline-start:14px;border-inline-start:2px solid var(--leaf)}
+.rooms-list .bub:focus-visible{outline:2px solid var(--leaf);outline-offset:2px}
+.toc img.sk{width:160px;height:110px;object-fit:cover;border:0}
+@media (max-width:760px){.toc img.sk{width:110px;height:76px}}
+.approach .sketch img{aspect-ratio:3/2;object-fit:cover;width:100%}
+
+/* no small over-titles (Hagai 24.11) */
+.eyebrow{display:none!important}
+
+/* poetic band: text in white on the photo, with the wordmark (Hagai 24.11) */
+.poem{padding-block:0 clamp(60px,8vw,110px)}
+.poem-fig{position:relative;margin:0}
+.poem-fig img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:60% 60%;display:block}
+.poem-fig figcaption{position:absolute;inset:auto 0 0 0;padding:clamp(28px,5vw,64px);background:linear-gradient(to top,rgba(20,22,16,.62),rgba(20,22,16,.25) 60%,transparent);color:#fff}
+.poem-wm{color:#fff;font-size:clamp(1.6rem,1.2rem + 1.4vw,2.4rem);margin:0 0 14px}
+.poem-wm i{color:#fff;opacity:.7}
+.poem-text{font-family:var(--he-display);font-size:clamp(1.1rem,.95rem + .6vw,1.45rem);line-height:1.7;max-width:46ch;margin:0;color:#fff}
+@media (max-width:860px){.poem .wrap{padding-inline:0}.poem-fig img{aspect-ratio:4/5}}
+
+/* poetic text + wordmark in white on the opening photo itself (Hagai 24.11) */
+.hero-poem{position:absolute;inset:auto 0 0 0;z-index:2;padding:clamp(24px,4vw,56px) var(--gutter);background:linear-gradient(to top,rgba(20,22,16,.6),rgba(20,22,16,.22) 65%,transparent);color:#fff}
+.hero-poem .poem-wm{margin:0 0 12px}
+.hero-poem .poem-text{max-width:52ch}
+.slides.still .slide{z-index:1}
+@media (max-width:860px){.hero-poem .poem-text{font-size:1rem}.hero-poem .poem-wm{font-size:1.4rem}}
+@media (max-width:860px){.show-hero .slides.still{aspect-ratio:4/5!important}.slides.still .slide{height:100%!important}}
+
+/* cookie notice, Hebrew (Hagai 24.11) */
+.cookies{position:fixed;inset-inline:0;bottom:0;z-index:70;background:#FBFAF6;border-top:1px solid var(--line);box-shadow:0 -10px 30px -20px rgba(0,0,0,.25)}
+.cookies-in{position:relative;max-width:var(--max);margin-inline:auto;padding:22px var(--gutter) calc(22px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:1fr auto;gap:18px 40px;align-items:center}
+.cookies h2{font-size:1.35rem;font-weight:600;margin:0 0 6px}
+.cookies p{margin:0;font-size:.95rem;line-height:1.6;color:var(--ink-2);max-width:80ch}
+.cookies-link{color:var(--ink);text-decoration:underline;text-underline-offset:.25em}
+.cookies-btns{display:flex;gap:12px;flex-wrap:wrap}
+.cookies-btns .btn{min-width:150px;justify-content:center}
+.cookies-x{position:absolute;top:8px;inset-inline-end:10px;background:none;border:0;font-size:1.6rem;line-height:1;color:var(--ink-2);cursor:pointer;padding:6px}
+@media (max-width:760px){.cookies-in{grid-template-columns:1fr;padding-top:26px}.cookies-btns .btn{flex:1;min-width:0}}
+
+/* cookie notice, refined: a small quiet card in the corner (Hagai 24.11) */
+.cookies{inset-inline:auto;left:clamp(12px,2vw,24px);right:auto;bottom:clamp(12px,2vw,24px);max-width:380px;background:var(--white);border:1px solid var(--line);border-top:1px solid var(--line);box-shadow:0 18px 40px -28px rgba(0,0,0,.35)}
+.cookies-in{display:block;padding:18px 20px 16px;max-width:none}
+.cookies h2{font-size:.95rem;font-weight:600;letter-spacing:.02em;margin:0 0 6px;padding-inline-end:20px}
+.cookies p{font-size:.82rem;line-height:1.6}
+.cookies-btns{margin-top:14px;gap:18px;align-items:center}
+.cookies-btns .btn{min-width:0;min-height:0;padding:.55em 1.1em;font-size:.8rem;font-weight:600;letter-spacing:.03em}
+.cookies-btns .btn-soil{box-shadow:none;padding-inline:0;text-decoration:underline;text-underline-offset:.3em;color:var(--ink-2)}
+.cookies-btns .btn-soil:hover{background:none;color:var(--ink)}
+.cookies-x{top:6px;inset-inline-end:8px;font-size:1.2rem}
+@media (max-width:760px){.cookies{left:10px;right:10px;max-width:none;bottom:10px}.cookies-btns .btn{flex:0 0 auto}}
+
+/* yellow greeting first, then only the photo (Hagai 24.11) */
+.hello{background:#FDE86B;padding-block:clamp(36px,5vw,72px) clamp(56px,8vw,120px)}
+.hello-text{font-family:var(--he-display);font-weight:400;font-size:clamp(1.5rem,1.1rem + 1.6vw,2.5rem);line-height:1.45;color:#1E1F1A;max-width:34em;margin:0;letter-spacing:0}
+.show-hero .hero-over{display:none}
+
+/* opening like a studio poster: full-screen yellow, greeting on top, a giant name below; the menu appears only after scrolling (Hagai 24.11) */
+.hello{min-height:100vh;min-height:100svh;padding:0!important;display:flex}
+.hello-in{display:flex;flex-direction:column;justify-content:space-between;width:100%;padding-block:clamp(28px,4vw,48px) clamp(18px,3vw,36px)}
+.hello-name{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin:0;color:#1E1F1A}
+.hello-name .big{font-family:var(--he-display);font-weight:700;font-size:clamp(5rem,21vw,20rem);line-height:.82;letter-spacing:-.02em}
+.hello-name .pill{flex:none;font-family:var(--he-display);font-weight:700;font-size:clamp(1rem,.7rem + 1.6vw,2.4rem);line-height:1;border:clamp(2px,.3vw,4px) solid currentColor;border-radius:999px;padding:.25em .7em .32em;margin-top:.4em;white-space:nowrap}
+body.home .top{position:fixed!important;inset-inline:0;top:0;transform:translateY(-105%);transition:transform .35s ease}
+body.home .top.scrolled{transform:none}
+@media (max-width:860px){.hello-name{flex-direction:column-reverse;align-items:flex-start}.hello-name .big{font-size:27vw}}
+
+
+
+/* greeting: much smaller, right side (Hagai 24.11) */
+.hello-text{font-size:clamp(1rem,.9rem + .45vw,1.3rem)!important;line-height:1.65!important;max-width:30em}
+
+/* photos drift forward very slightly while scrolling, almost unnoticeable (Hagai 24.11) */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .frame img, .slide img, .tile img, .pathcard img, .poem-fig img {
+      animation: admati-drift linear both;
+      animation-timeline: view();
+      animation-range: entry 0% exit 100%;
+    }
+    @keyframes admati-drift { from { object-view-box: inset(0% 0% 0% 0%); } to { object-view-box: inset(3.5% 3.5% 3.5% 3.5%); } }
+  }
+}
+
+/* gardens: yellow edge-to-edge grid of tall photos + filter pill (Hagai 24.11) */
+.ggrid{background:#FDE86B;padding:clamp(12px,1.6vw,24px);position:relative}
+.gtiles{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,1.6vw,24px)}
+.gtile{position:relative;display:block;overflow:hidden;aspect-ratio:2/3;background:#e9d65c}
+.gtile[hidden]{display:none}
+.gtile img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .8s ease}
+.gtile:hover img{transform:scale(1.03)}
+.gcap{position:absolute;inset:auto 0 0 0;padding:28px 14px 12px;color:#fff;font-size:.85rem;line-height:1.4;background:linear-gradient(to top,rgba(0,0,0,.5),transparent);opacity:0;transition:opacity .3s}
+.gcap b{display:block;font-weight:600;font-size:.95rem}
+.gtile:hover .gcap,.gtile:focus-visible .gcap{opacity:1}
+.gfilter{position:sticky;top:calc(env(safe-area-inset-top,0px) + 120px);z-index:5;display:flex;gap:clamp(20px,3vw,44px);width:max-content;margin:0 auto calc(-1 * clamp(44px,4vw,60px));transform:translateY(clamp(18px,2.4vw,40px));background:#fff;border-radius:999px;padding:.5em 1.6em;box-shadow:0 10px 30px -18px rgba(0,0,0,.35)}
+.gfilter button{all:unset;cursor:pointer;font-family:var(--he-display);font-size:clamp(1.1rem,.9rem + .8vw,1.6rem);color:var(--ink-2);padding:.1em 0}
+.gfilter button.on,.gfilter button:hover{color:var(--ink)}
+.gfilter button.on{border-bottom:1px solid var(--ink)}
+.gfilter button:focus-visible{outline:2px solid var(--leaf);outline-offset:4px}
+@media (max-width:1000px){.gtiles{grid-template-columns:repeat(2,1fr)}.gcap{opacity:1}}
+@media (max-width:520px){.gfilter{top:110px;padding:.45em 1.2em;gap:18px}}
+
+/* menu in the brand yellow (Hagai 24.11) */
+.top,.top.scrolled,.top.solid{background:#FDE86B!important;box-shadow:0 1px 0 rgba(0,0,0,.08)!important}
+.nav2 .subs{border-top-color:rgba(0,0,0,.12)}
+.nav2 .sub a{color:#4a4a3c}
+
+/* cookie notice: bottom of the screen edge to edge, black buttons (Hagai 24.11) */
+.cookies{left:0!important;right:0!important;bottom:0!important;max-width:none!important;border:0!important;border-top:1px solid rgba(0,0,0,.08)!important;background:rgba(251,250,246,.95)!important;box-shadow:0 -10px 30px -24px rgba(0,0,0,.3)!important}
+.cookies-in{display:grid!important;grid-template-columns:1fr auto;align-items:center;gap:12px 48px;max-width:var(--max);margin-inline:auto;padding:18px var(--gutter) calc(18px + env(safe-area-inset-bottom,0px))!important}
+.cookies h2{font-size:1rem!important}
+.cookies p{font-size:.85rem!important}
+.cookies-btns{margin-top:0!important;gap:12px!important}
+.cookies-btns .btn{font-size:.85rem!important;padding:.8em 2em!important;min-width:150px;justify-content:center}
+.cookies-btns .btn-leaf{background:#111!important;color:#fff!important}
+.cookies-btns .btn-leaf:hover{background:#333!important}
+.cookies-btns .btn-soil{background:transparent!important;color:#111!important;box-shadow:inset 0 0 0 1px #111!important;text-decoration:none!important;padding-inline:2em!important}
+.cookies-btns .btn-soil:hover{background:#111!important;color:#fff!important}
+@media (max-width:760px){.cookies-in{grid-template-columns:1fr}.cookies-btns .btn{flex:1;min-width:0}}
+
+/* cookie buttons: narrower and more delicate (Hagai 24.11) */
+.cookies-btns .btn{min-width:0!important;min-height:0!important;padding:.42em 1.1em!important;font-size:.76rem!important;font-weight:500!important;letter-spacing:.04em}
+.cookies-btns .btn-soil{padding-inline:1.1em!important}
+.cookies-btns{gap:8px!important}
+@media (max-width:760px){.cookies-btns .btn{flex:0 0 auto!important}}
+
+/* WhatsApp button in the menu: black and delicate, like the cookie buttons (Hagai 24.11) */
+.top>.wrap>.btn{background:#111!important;color:#fff!important;box-shadow:none!important;padding:.45em 1.1em!important;font-size:.8rem!important;font-weight:500!important;min-height:0!important;letter-spacing:.03em}
+.top>.wrap>.btn:hover{background:#333!important}
+.top>.wrap>.btn svg{width:1.05em;height:1.05em}
+.wa{background:#111!important;color:#fff!important}
+
+/* menu button: outlined pill "יש לך פרויקט?" (Hagai 24.11) */
+.top>.wrap>.btn{background:transparent!important;color:#111!important;box-shadow:inset 0 0 0 1.5px #111!important;border-radius:999px!important;padding:.5em 1.3em!important;font-size:.95rem!important;font-weight:500!important}
+.top>.wrap>.btn:hover{background:#111!important;color:#FDE86B!important}
+
+/* yellow opening a bit shorter, so the top of the next photo peeks in (Hagai 24.11) */
+.hello{min-height:100vh!important;min-height:100svh!important}
+
+/* menu option 1: one narrow row, small yellow box under the item (Hagai 24.11) */
+.nav1 .main{position:relative}
+.nav1 .main>li{position:relative}
+.nav1 .main>li>a{display:inline-block}
+.nav1 .drop{position:absolute;top:calc(100% + 12px);right:-18px;z-index:20;list-style:none;margin:0;padding:12px 18px;min-width:210px;background:#FDE86B;border:1px solid rgba(0,0,0,.12);box-shadow:0 14px 30px -22px rgba(0,0,0,.35);display:none}
+.nav1 .drop::before{content:"";position:absolute;inset:-14px 0 auto 0;height:14px}
+.nav1 .main>li:hover>.drop,.nav1 .main>li:focus-within>.drop,.nav1 .main>li.open>.drop{display:block}
+.nav1 .drop a{display:block;padding:6px 0;font-size:.9rem;color:#1E1F1A;text-decoration:none;border:0;white-space:nowrap}
+.nav1 .drop a:hover,.nav1 .drop a[aria-current]{text-decoration:underline;text-underline-offset:.25em}
+.top .wrap{padding-block:14px!important}
+@media (max-width:860px){
+  .nav1 .main{overflow:visible!important;flex-wrap:wrap;gap:6px 20px!important;padding:10px 0 4px!important}
+  .nav1 .drop{right:auto;left:auto;inset-inline-start:-12px;min-width:190px}
+}
+
+/* filter: no underline under the active choice, darker text instead (Hagai 24.11) */
+.gfilter button.on{border-bottom:0!important;color:#111!important;font-weight:600}
+
+/* gardens grid: place name on every photo; hover/tap swaps to a second photo, darkens, shows a poetic line (Hagai 24.11) */
+.gtile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .7s ease,transform .8s ease}
+.gtile .g2{opacity:0}
+.gtile::after{content:"";position:absolute;inset:0;background:rgba(15,16,12,.12);transition:background .6s ease;pointer-events:none}
+.gplace,.gpoem{position:absolute;inset-inline:8%;z-index:2;color:#fff;text-align:center;pointer-events:none;transition:opacity .5s ease,transform .6s ease}
+.gplace{top:50%;transform:translateY(-50%);font-family:var(--he-display);font-size:clamp(1.3rem,1rem + 1vw,2rem);line-height:1.15;text-shadow:0 1px 18px rgba(0,0,0,.35)}
+.gpoem{top:50%;transform:translateY(-40%);opacity:0;font-family:var(--he-display);font-size:clamp(1rem,.9rem + .35vw,1.2rem);line-height:1.5}
+.gpoem b{display:block;font-weight:600;font-size:1.25em;margin-bottom:8px}
+.gtile:hover .g1,.gtile.on .g1,.gtile:focus-visible .g1{opacity:0}
+.gtile:hover .g2,.gtile.on .g2,.gtile:focus-visible .g2{opacity:1}
+.gtile:hover::after,.gtile.on::after,.gtile:focus-visible::after{background:rgba(15,16,12,.45)}
+.gtile:hover .gplace,.gtile.on .gplace,.gtile:focus-visible .gplace{opacity:0}
+.gtile:hover .gpoem,.gtile.on .gpoem,.gtile:focus-visible .gpoem{opacity:1;transform:translateY(-50%)}
+.gtile:hover img{transform:none}
+.gcap{display:none}
+@media (prefers-reduced-motion:reduce){.gtile img,.gplace,.gpoem,.gtile::after{transition:none}}
+
+/* place name small, bottom-right, like before (Hagai 24.11) */
+.gplace{top:auto!important;bottom:14px;inset-inline:auto!important;right:16px;left:auto;transform:none!important;text-align:right;font-family:var(--he-body)!important;font-size:.85rem!important;font-weight:600;letter-spacing:.02em;text-shadow:0 1px 8px rgba(0,0,0,.45)}
+
+/* place name: proper spacing from the corner (Hagai 24.11) */
+.gplace{bottom:clamp(16px,1.6vw,24px)!important;right:clamp(16px,1.6vw,24px)!important;line-height:1.3}
+
+/* gardens page: no visible subtitle under the title; kept for search engines (Hagai 24.11) */
+.toc-sub{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* undo: the gardens page subtitle stays visible; on the photo only the poetic title, no extra line (Hagai 24.11) */
+.toc-sub{position:static!important;width:auto;height:auto;overflow:visible;clip:auto;white-space:normal}
+.gpoem{font-size:0!important}
+.gpoem b{font-size:clamp(1.2rem,1rem + .6vw,1.6rem)!important;margin:0!important}
+
+/* second brand colour: warm sand #F1EDD6 (Hagai 24.11). Alternating bands, learn band, cookie bar */
+:root{--sand:#F1EDD6;--sand-line:#E2DBBC}
+.white,section.white{background:var(--sand)!important;background-image:none!important}
+.learn{background:var(--sand)!important}
+.white .frame,.white .quote,.learn a.path{background:#FBF9F0}
+.cookies{background:rgba(241,237,214,.96)!important;border-top:1px solid var(--sand-line)!important}
+.gfilter{background:var(--sand)!important}
+
+/* third brand colour: olive green #566A4B with sand text (Hagai 24.11). Filled buttons, contact band, footer */
+:root{--olive:#566A4B;--olive-hi:#4A5D40;--leaf:#566A4B;--leaf-hi:#4A5D40;--leaf-deep:#566A4B}
+.btn-leaf{background:var(--olive)!important;color:var(--sand)!important}
+.btn-leaf:hover{background:var(--olive-hi)!important}
+.cookies-btns .btn-leaf{background:var(--olive)!important;color:var(--sand)!important}
+.cookies-btns .btn-leaf:hover{background:var(--olive-hi)!important}
+.contact.humus{background:var(--olive)!important;color:var(--sand)}
+.contact.humus h2,.contact.humus h3,.contact.humus a{color:var(--sand)}
+.contact.humus .btn-soil{color:var(--sand);box-shadow:inset 0 0 0 1px var(--sand)}
+.contact.humus .btn-leaf{background:var(--sand)!important;color:var(--olive)!important}
+.foot{background:var(--olive)!important;color:rgba(241,237,214,.82)}
+.foot a,.foot .wm-foot{color:var(--sand)}
+
+/* quiet sand footer (Hagai 24.11, from a reference image) — replaces the olive footer */
+.foot.foot2{background:var(--sand)!important;color:#6F6C5F;border-top:22px solid #F7F4EA;padding-block:clamp(56px,7vw,110px) calc(clamp(48px,5vw,80px) + env(safe-area-inset-bottom,0px));font-size:.98rem;line-height:1.75}
+.foot2 .wrap{display:grid;grid-template-columns:auto auto auto 1fr;align-items:start;gap:0 clamp(40px,5vw,96px)}
+.foot2 p{margin:0 0 18px}
+.foot2 a{color:#6F6C5F;text-decoration:none}
+.foot2 a:hover{color:var(--ink);text-decoration:underline;text-underline-offset:.3em}
+.foot2 .en{font-family:inherit;letter-spacing:0;direction:ltr;unicode-bidi:isolate}
+.foot2 .f-contact{padding-inline-end:clamp(32px,4vw,64px);border-inline-end:1px solid #CFC7A6;padding-bottom:6px}
+.foot2 .f-icons{display:flex;gap:18px;margin:28px 0 0}
+.foot2 .f-icons a{color:#7C786A;display:inline-flex}
+.foot2 .f-icons a:hover{color:var(--ink)}
+.foot2 .f-icons svg{width:26px;height:26px}
+.foot2 .f-links{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.foot2 .f-mark{justify-self:end;align-self:end;opacity:.55;filter:grayscale(1)}
+.foot2 .f-mark:hover{opacity:.8}
+@media (max-width:760px){
+  .foot2 .wrap{grid-template-columns:1fr 1fr;gap:36px 24px}
+  .foot2 .f-contact{grid-column:1/-1;border-inline-end:0;border-bottom:1px solid #CFC7A6;padding:0 0 28px}
+  .foot2 .f-mark{grid-column:1/-1;justify-self:start}
+}
+
+/* opening text: a little lower and a little bigger (Hagai 24.11) */
+.hello-text{font-size:clamp(1.2rem,1.05rem + .6vw,1.6rem)!important;line-height:1.6!important;max-width:30em;margin-top:clamp(36px,9vh,120px)!important}
+/* tagline label: thin square frame instead of a thick pill (Hagai 24.11) */
+.hello-name .pill{border:1.5px solid currentColor!important;border-radius:0!important;font-weight:400;padding:.3em .8em .36em}
+/* tagline frame: equal spacing on all sides, sits right beside the big name (Hagai 24.11) */
+.hello-name{justify-content:flex-start!important;gap:clamp(12px,1.6vw,28px)!important}
+.hello-name .pill{display:inline-flex;align-items:center;line-height:1!important;padding:.42em!important}
+
+/* home: full-width panorama photos between sections, gallery style with a small place label (Hagai 24.11) */
+.pano{position:relative;margin:0;width:100%;aspect-ratio:2.1/1;max-height:92vh;overflow:hidden;background:var(--cream-2)}
+.pano img{display:block;width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.pano{aspect-ratio:4/3}}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .pano img{animation:admati-drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  }
+}
+
+/* some panoramas as a large photo set to one side with open space beside it (Hagai 24.11, reference image) */
+.pano.side{width:60%;aspect-ratio:1.2/1;max-height:none;margin-inline-start:auto;margin-block:clamp(40px,6vw,96px)}
+@media (max-width:760px){.pano.side{width:88%;aspect-ratio:4/5;margin-block:32px}}
+
+/* staggered photo sequence: large photos stepping across the page, open space around them (Hagai 24.11) */
+.stagger{display:flex;flex-direction:column;gap:clamp(56px,8vw,130px);padding-block:clamp(56px,8vw,130px);background:var(--cream)}
+.stagger figure{position:relative;margin:0;overflow:hidden;background:var(--cream-2)}
+.stagger img{display:block;width:100%;height:100%;object-fit:cover}
+.stagger figure:nth-child(1){width:60%;aspect-ratio:1.2/1;margin-left:0}
+.stagger figure:nth-child(2){width:50%;aspect-ratio:1.5/1;margin-left:35%}
+.stagger figure:nth-child(3){width:60%;aspect-ratio:1.6/1;margin-left:16%}
+@media (max-width:760px){
+  .stagger{gap:36px;padding-block:44px}
+  .stagger figure:nth-child(1){width:86%;aspect-ratio:4/5}
+  .stagger figure:nth-child(2){width:78%;margin-left:22%;aspect-ratio:1/1}
+  .stagger figure:nth-child(3){width:86%;margin-left:7%;aspect-ratio:4/3}
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .stagger img{animation:admati-drift linear both;animation-timeline:view();animation-range:entry 0% exit 100%}
+  }
+}
+
+/* staggered sequence, refined from Hagai's second reference: 3rd photo squarer, 4th flush to the right edge */
+.stagger figure:nth-child(3){aspect-ratio:1.2/1!important}
+.stagger figure:nth-child(4){width:50%;aspect-ratio:1.45/1;margin-left:50%}
+@media (max-width:760px){.stagger figure:nth-child(3){aspect-ratio:4/3!important}.stagger figure:nth-child(4){width:80%;margin-left:20%;aspect-ratio:1/1}}
+
+/* "see more gardens": big quiet link at the end of each staggered sequence */
+.stagger-more{align-self:flex-end;margin-inline-end:clamp(24px,3vw,56px);display:inline-flex;align-items:flex-end;gap:clamp(20px,3vw,56px);color:var(--ink);text-decoration:none;font-family:var(--he-display);font-weight:400;font-size:clamp(2rem,1.2rem + 2.6vw,4.2rem);line-height:1.05}
+.stagger-more span{display:flex;flex-direction:column}
+.stagger-more b{font-weight:400}
+.stagger-more b+b{padding-inline-start:.9em}
+.stagger-more svg{width:clamp(56px,6vw,110px);height:auto;flex:none;transition:transform .35s ease}
+.stagger-more:hover svg{transform:translate(6px,6px)}
+.stagger-more:hover b{text-decoration:underline;text-underline-offset:.15em;text-decoration-thickness:1px}
+.stagger-more{flex-direction:row-reverse}
+.stagger-more b+b{padding-inline-start:0}
+.stagger-more b:first-child{padding-inline-start:1.5em}
+/* stagger positions are visual (left/right), so lay the column out left-to-right; content stays Hebrew */
+.stagger{direction:ltr}
+.stagger>*{direction:rtl}
+.stagger-more{align-self:flex-start;margin-inline-end:0;margin-left:clamp(24px,3vw,56px)}
+
+/* opening photo: a line of text on a soft black fade at the bottom, like the reference (Hagai 24.11) */
+.show-hero .slides.still{position:relative}
+.show-hero .slides.still::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,8,.62) 0%,rgba(10,10,8,.28) 30%,rgba(10,10,8,0) 55%);pointer-events:none;z-index:1}
+.hero-line{position:absolute;z-index:2;inset-inline:clamp(20px,2.6vw,44px);bottom:clamp(20px,3vw,48px);margin:0;max-width:24em;color:#fff;font-family:var(--he-display);font-weight:400;font-size:clamp(1.45rem,.9rem + 2.3vw,3.3rem);line-height:1.18;text-wrap:balance;text-shadow:0 1px 24px rgba(0,0,0,.25)}
+.hero-line span{color:rgba(255,255,255,.72)}
+.show-hero .museum{z-index:3}
+@media (max-width:860px){.hero-line{font-size:clamp(1.3rem,5.6vw,1.9rem)}}
+
+/* contact area in the reference style (Hagai 24.11): light background, olive spaced title, boxed fields with the name inside, olive send button */
+.contact.humus{background:#F7F4EA!important;color:var(--ink)!important;padding-block:clamp(64px,8vw,120px)!important}
+.contact.humus h2{color:var(--olive)!important;font-family:var(--he-display);font-weight:700;font-size:clamp(2.3rem,1.5rem + 2.8vw,4rem)!important;letter-spacing:.1em;line-height:1.1;max-width:none}
+.contact.humus .lede{color:#5E5F55!important;font-size:clamp(1.05rem,1rem + .3vw,1.25rem);margin-top:14px;max-width:34ch}
+.contact.humus .eyebrow{display:none}
+.contact.humus .actions{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:18px}
+.contact.humus .actions .btn{background:transparent!important;color:#6B6A60!important;box-shadow:none!important;border:0!important;padding:0!important;min-height:0;font-weight:400;font-size:1rem;gap:8px}
+.contact.humus .actions .btn:hover{color:var(--olive)!important;text-decoration:underline;text-underline-offset:.3em}
+.contact.humus .actions .btn svg{width:30px;height:30px}
+.contact.humus .direct{color:#6B6A60;font-size:.95rem;margin-top:22px}
+.contact.humus .direct small{color:#8d8a7e}
+.contact.humus form.lead{display:grid;gap:12px;align-content:start}
+.contact.humus .row2{gap:12px}
+.contact.humus .field.inph>label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.contact.humus input:not([type=radio]):not([type=file]),.contact.humus select,.contact.humus textarea{
+  font:inherit;font-size:1.05rem;color:var(--ink)!important;background:transparent!important;border:1px solid #CFC9B8!important;border-radius:0;padding:16px 22px!important;width:100%;min-height:58px}
+.contact.humus textarea{min-height:126px;resize:vertical}
+.contact.humus select{appearance:none;background-image:linear-gradient(45deg,transparent 50%,#8d8a7e 50%),linear-gradient(-45deg,transparent 50%,#8d8a7e 50%)!important;background-position:22px 50%,16px 50%!important;background-size:6px 6px!important;background-repeat:no-repeat!important;color:#8d8a7e!important}
+.contact.humus select:valid,.contact.humus select option{color:var(--ink)!important}
+.contact.humus ::placeholder{color:#8d8a7e;opacity:1}
+.contact.humus input:focus,.contact.humus select:focus,.contact.humus textarea:focus{outline:none;border-color:var(--olive)!important}
+.contact.humus .chips legend,.contact.humus .field label{color:#6B6A60;opacity:1}
+.contact.humus .chips span{border:1px solid #CFC9B8!important;color:#5E5F55;background:transparent}
+.contact.humus .chips input:checked+span{background:var(--olive)!important;color:var(--sand)!important;border-color:var(--olive)!important}
+.contact.humus details.more summary{color:#6B6A60;cursor:pointer}
+.contact.humus form.lead>button[type=submit]{background:var(--olive)!important;color:var(--sand)!important;border:0!important;box-shadow:none!important;min-width:min(100%,250px);min-height:70px;padding:0 32px!important;font-weight:700;font-size:1.15rem;letter-spacing:.04em;justify-self:start;justify-content:center}
+.contact.humus form.lead>button[type=submit]:hover{background:#4A5D40!important}
+.contact.humus .todo{color:#8d8a7e}
+.contact.humus .field.inph{background:none!important;box-shadow:none!important}
+
+/* clients: one at a time, centered, changing by itself like a slow gallery (Hagai 24.11) */
+.clients.clients-rot{display:block!important;position:relative;list-style:none;margin:clamp(24px,4vw,48px) auto 0;padding:0;height:clamp(170px,18vw,240px);max-width:760px;border:0!important;grid-template-columns:none}
+.clients-rot .client{position:absolute;inset:0;display:flex!important;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;border:0!important;background:none!important;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s;padding:0}
+.clients-rot .client.on{opacity:1;visibility:visible;transition:opacity .9s ease}
+.clients-rot .client b{font-family:var(--he-display);font-weight:400;font-size:clamp(2rem,1.3rem + 2.6vw,3.6rem);line-height:1.1;color:var(--ink)}
+.clients-rot .client span{color:var(--ink-2);font-size:clamp(.95rem,.9rem + .2vw,1.1rem)}
+.clients-rot .client img{max-height:clamp(56px,7vw,96px);max-width:min(80%,420px);width:auto;height:auto;object-fit:contain}
+.clients-dots{display:flex;justify-content:center;gap:10px;margin-top:14px}
+.clients-dots button{width:9px;height:9px;padding:0;border:1px solid var(--ink-2);border-radius:50%;background:transparent;cursor:pointer}
+.clients-dots button[aria-current="true"]{background:var(--ink)}
+@media (prefers-reduced-motion:reduce){.clients-rot .client,.clients-rot .client.on{transition:none}}
+
+/* the walking firebug (Hagai 24.11): fixed low on the screen, wanders side to side as the page scrolls past */
+.bug{position:fixed;left:0;top:68vh;z-index:40;width:46px;height:70px;margin-left:-23px;margin-top:-35px;pointer-events:none;will-change:transform;filter:drop-shadow(0 6px 6px rgba(40,20,10,.22))}
+.bug svg{display:block;width:100%;height:100%;overflow:visible}
+.bug .lg{transform-box:view-box}
+.bug .ant path{transform-box:view-box}
+.bug.walk .lg.a{animation:bug-step .26s ease-in-out infinite alternate}
+.bug.walk .lg.b{animation:bug-step .26s ease-in-out infinite alternate-reverse}
+.bug.walk .an1{animation:bug-ant .5s ease-in-out infinite alternate}
+.bug.walk .an2{animation:bug-ant .5s ease-in-out infinite alternate-reverse}
+@keyframes bug-step{from{transform:rotate(-13deg)}to{transform:rotate(13deg)}}
+@keyframes bug-ant{from{transform:rotate(-6deg)}to{transform:rotate(6deg)}}
+@media (max-width:760px){.bug{width:32px;height:49px;margin-left:-16px;margin-top:-24px;top:72vh}}
+@media (prefers-reduced-motion:reduce){.bug{display:none}}
+@media print{.bug{display:none}}
+
+/* walking beetle, round 2 (Hagai 24.11): the real logo drawing, 44px like the footer one */
+.bug{width:44px!important;height:44px!important;margin-left:-22px!important;margin-top:-22px!important;filter:none!important;z-index:30}
+.bug-i{width:100%;height:100%;transform-origin:50% 50%}
+.bug-i img{display:block;width:100%;height:100%;filter:drop-shadow(0 3px 3px rgba(40,20,10,.25))}
+.bug.walk .bug-i img{animation:bug-waddle .3s ease-in-out infinite alternate}
+@keyframes bug-waddle{from{transform:rotate(-5deg) translateY(-.6px)}to{transform:rotate(5deg) translateY(.6px)}}
+@media (max-width:760px){.bug{width:36px!important;height:36px!important;margin-left:-18px!important;margin-top:-18px!important}}
+.bug{top:0!important}
+
+/* client quotes: one at a time, centered, changing by itself like a gallery (Hagai 24.11) */
+.quotes.quotes-rot{display:grid!important;grid-template-columns:1fr!important;grid-template-areas:"q";max-width:860px;margin:clamp(28px,4vw,56px) auto 0;gap:0!important}
+.quotes-rot .quote{grid-area:q;align-self:center;text-align:center;background:none!important;border:0!important;box-shadow:none!important;transform:none!important;padding:0!important;opacity:0;visibility:hidden;transition:opacity .9s ease,visibility 0s linear .9s}
+.quotes-rot .quote.on{opacity:1;visibility:visible;transition:opacity .9s ease}
+.quotes-rot .quote p{font-family:var(--he-display);font-size:clamp(1.5rem,1.05rem + 1.7vw,2.6rem);line-height:1.35;color:var(--ink);text-wrap:balance;margin:0 auto;max-width:28ch}
+.quotes-rot .quote footer{margin-top:22px;color:var(--ink-2);font-size:clamp(.95rem,.9rem + .2vw,1.1rem)}
+.quotes-rot .quote footer b{color:var(--ink);font-weight:600}
+@media (prefers-reduced-motion:reduce){.quotes-rot .quote,.quotes-rot .quote.on{transition:none}}
+
+.quotes-rot .quote{grid-column:1/-1!important;grid-row:1!important;width:100%!important;max-width:none!important;margin:0!important}
+
+/* short contact form: name, email, phone + send beside the phone (Hagai 24.11) */
+.contact.humus form.lead-min{display:grid;gap:10px;align-content:start;max-width:720px}
+.contact.humus .lead-min .lead-last{display:grid;grid-template-columns:1.55fr 1fr;gap:18px;align-items:stretch}
+.contact.humus .lead-min .lead-last button[type=submit]{background:var(--olive)!important;color:var(--sand)!important;border:0!important;box-shadow:none!important;min-height:58px;padding:0 24px!important;font-weight:700;font-size:1.15rem;letter-spacing:.04em;justify-content:center;width:100%}
+.contact.humus .lead-min .lead-last button[type=submit]:hover{background:#4A5D40!important}
+@media (max-width:520px){.contact.humus .lead-min .lead-last{grid-template-columns:1fr}}
+
+
+/* the walking beetle in grey, the same look as the small footer beetle (Hagai 24.11) */
+.bug-i img{filter:grayscale(1)!important;opacity:.55}
+
+.sr-only{position:absolute!important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:-1px;padding:0;border:0}
+
+/* quotes: same text size as the section intro lines (Hagai 24.11) */
+.quotes-rot .quote p{font-family:var(--he-body)!important;font-size:clamp(1.1rem,1rem + .4vw,1.3rem)!important;line-height:1.75!important;max-width:44ch!important}
+.quotes-rot .quote footer{margin-top:14px;font-size:.92rem}
+
+/* clients: one quiet row of logos (Hagai 24.11) */
+.clients.clients-row{display:flex!important;flex-wrap:nowrap;align-items:center;justify-content:space-between;gap:clamp(18px,3vw,48px);list-style:none;margin:clamp(28px,4vw,56px) 0 0;padding:clamp(18px,2.5vw,32px) 0;border:0!important;border-block:1px solid var(--line)!important;height:auto;max-width:none;position:static}
+.clients-row .client{position:static!important;opacity:1!important;visibility:visible!important;display:flex!important;align-items:center;justify-content:center;flex:0 1 auto;min-width:0;border:0!important;background:none!important;padding:0!important}
+.clients-row .client img{display:block;height:clamp(30px,3.2vw,46px);width:auto;max-width:100%;max-height:none;object-fit:contain;filter:grayscale(1);opacity:.7;transition:opacity .3s,filter .3s}
+.clients-row .client img:hover{filter:none;opacity:1}
+.clients-row .client.name b{font-family:var(--he-display);font-weight:700;font-size:clamp(.95rem,.8rem + .45vw,1.2rem);line-height:1.1;color:#7d7a6e;white-space:nowrap;text-align:center}
+.clients-row+.clients-dots{display:none}
+@media (max-width:860px){.clients.clients-row{flex-wrap:wrap;justify-content:center;gap:22px 34px}}
+.clients-row .client{min-height:0!important;height:auto!important;aspect-ratio:auto!important;flex:1 1 0!important}
+.clients-row .client img{max-height:44px}
+
+/* client logos: black, in a slowly moving strip, no lines (Hagai 24.11) */
+.logo-marquee{overflow:hidden;margin-top:clamp(28px,4vw,56px);margin-inline:calc(-1 * var(--gutter,20px));
+  -webkit-mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent);mask-image:linear-gradient(to right,transparent,#000 8%,#000 92%,transparent)}
+.clients.clients-row.marquee-track{display:flex!important;flex-wrap:nowrap!important;justify-content:flex-start;width:max-content;gap:0!important;margin:0!important;padding:clamp(10px,1.5vw,20px) 0!important;border:0!important;border-block:0!important;animation:logo-run 38s linear infinite}
+.marquee-track .client{flex:none!important;padding-inline:clamp(26px,3.4vw,52px)!important}
+.marquee-track .client img{height:clamp(30px,3vw,42px)!important;max-height:none!important;width:auto;max-width:none;filter:none!important;opacity:1!important}
+.marquee-track .client.name b{color:#111!important;font-size:clamp(1rem,.85rem + .5vw,1.3rem)}
+.logo-marquee:hover .marquee-track{animation-play-state:paused}
+@keyframes logo-run{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@media (prefers-reduced-motion:reduce){
+  .clients.clients-row.marquee-track{animation:none;flex-wrap:wrap!important;width:auto;justify-content:center}
+  .marquee-track [aria-hidden="true"]{display:none!important}
+}
+.marquee-track img[src*="vanatata"]{height:clamp(46px,4.6vw,64px)!important}
+
+/* staggered photos: on hover (or tap) the photo changes, darkens a little and a short line appears in the middle (Hagai 24.11) */
+.stagger figure img{transition:opacity .7s ease}
+.stagger figure .s2{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;z-index:1}
+.stagger figure::after{content:"";position:absolute;inset:0;background:rgba(15,16,12,0);transition:background .6s ease;z-index:2;pointer-events:none}
+.stagger .spoem{position:absolute;inset-inline:8%;top:50%;transform:translateY(-40%);z-index:3;opacity:0;color:#fff;text-align:center;font-family:var(--he-display);font-size:clamp(1.4rem,1rem + 1.6vw,2.6rem);line-height:1.2;text-wrap:balance;pointer-events:none;transition:opacity .5s ease,transform .6s ease;text-shadow:0 1px 20px rgba(0,0,0,.3)}
+.stagger figure .museum{z-index:4}
+.stagger figure:hover .s2,.stagger figure:focus-visible .s2,.stagger figure:focus .s2{opacity:1}
+.stagger figure:hover::after,.stagger figure:focus-visible::after,.stagger figure:focus::after{background:rgba(15,16,12,.42)}
+.stagger figure:hover .spoem,.stagger figure:focus-visible .spoem,.stagger figure:focus .spoem{opacity:1;transform:translateY(-50%)}
+.stagger figure:focus{outline:none}
+.stagger figure:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
+@media (prefers-reduced-motion:reduce){.stagger figure img,.stagger .spoem,.stagger figure::after{transition:none}}
+.crop.plate img{object-position:50% 42%;background:#f3efe3}
+/* botanical plates shown whole, never cropped (Hagai 24.11) */
+.crop.plate img{aspect-ratio:auto!important;width:100%;height:auto!important;object-fit:contain!important;background:none}
+.crop.plate .frame{background:none;box-shadow:none;padding:0 0 40px}
+/* quotes: the old one fades out before the new one fades in, so two never overlap */
+.quotes-rot .quote{transition:opacity .35s ease,visibility 0s linear .35s!important}
+.quotes-rot .quote.on{transition:opacity .8s ease .35s!important}
+.marquee-track img[src*="maagan"]{height:clamp(40px,4vw,56px)!important}
+.marquee-track img[src*="gezer"]{height:clamp(38px,3.8vw,52px)!important}
+.marquee-track img[src*="harmonia"]{height:clamp(46px,4.6vw,64px)!important}
+
+/* logos: equal visual weight, each sized by its shape (same area), Hagai 24.11 */
+.marquee-track img[src*="maagan-michael-black"]{height:35px!important}
+.marquee-track img[src*="shatit-black"]{height:34px!important}
+.marquee-track img[src*="meir-efrat-black"]{height:42px!important}
+.marquee-track img[src*="gezer-black"]{height:45px!important}
+.marquee-track img[src*="tabak-black"]{height:40px!important}
+.marquee-track img[src*="vanatata-black"]{height:56px!important}
+.marquee-track img[src*="harmonia-bateva-black"]{height:63px!important}
+@media (max-width:760px){.marquee-track .client img{transform:scale(.8);transform-origin:center}}
+
+/* home steps without numbers; plant cards without Latin names, text centered; the plates move slowly as a gallery (Hagai 24.11) */
+body.home .layer .n{display:none!important}
+.crop.plate figcaption i{display:none!important}
+.crop.plate figcaption,.crop.plate .stamp{text-align:center!important}
+.crop.plate .stamp{position:static!important;display:block;margin-top:12px;font-family:var(--he-display);font-size:1.15rem;color:var(--ink);background:none!important;padding:0!important;transform:none!important}
+.crop.plate figcaption{margin-top:6px!important}
+.crop.plate figcaption p{max-width:26ch;margin-inline:auto}
+.plants-run{overflow:hidden!important;-webkit-mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(to right,transparent,#000 6%,#000 94%,transparent)}
+.plants-run .strip{width:max-content;padding-inline:0!important;gap:0!important;animation:plants-run 70s linear infinite}
+.plants-run .crop.plate{padding-inline:clamp(10px,1.4vw,22px)}
+.plants-run:hover .strip{animation-play-state:paused}
+@keyframes plants-run{from{transform:translateX(0)}to{transform:translateX(50%)}}
+@media (prefers-reduced-motion:reduce){.plants-run{overflow-x:auto!important}.plants-run .strip{animation:none}.plants-run [aria-hidden="true"]{display:none}}
+
+/* no soft fade at the edges of the moving galleries (Hagai 24.11) */
+.plants-run,.logo-marquee{-webkit-mask-image:none!important;mask-image:none!important}
+
+.marquee-track img[src*="bat-shlomo-black"]{height:68px!important}
+.marquee-track .client.name b{font-size:clamp(1.15rem,.95rem + .7vw,1.55rem)!important;font-weight:700;letter-spacing:.01em}
+
+/* header button: a precise thin square frame, like the tagline frame (Hagai 24.11) */
+.top>.wrap>.btn{border-radius:0!important;box-shadow:inset 0 0 0 1.5px #111!important;border:0!important;padding:.5em .8em!important;line-height:1!important;display:inline-flex;align-items:center;justify-content:center}
+
+/* garden corners: their photo fades in over the big frame (Hagai 24.11) */
+.rooms-frame{position:relative}
+.rooms-frame .room-pic{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .45s ease;z-index:1}
+.rooms-frame .room-pic.on{opacity:1}
+.rooms-frame .stamp{z-index:2}
+.rooms-mini a.on{background:#111!important;color:var(--yellow)!important;border-color:#111!important}
+@media (prefers-reduced-motion:reduce){.rooms-frame .room-pic{transition:none}}
+
+/* public landscaping: a longer story text (Hagai 24.11) */
+.public-story .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,5vw,88px);align-items:start}
+.public-story h2{margin:0;font-size:clamp(2.2rem,1.4rem + 2.6vw,3.8rem);line-height:1.05;text-wrap:balance}
+.public-prose{max-width:62ch}
+.public-prose p{margin:0 0 1.1em}
+.public-prose .lede{font-size:clamp(1.15rem,1.05rem + .45vw,1.4rem);line-height:1.6;color:var(--ink)}
+@media (max-width:860px){.public-story .wrap{grid-template-columns:1fr}}
+.public-logos{padding-block:clamp(10px,2vw,30px) clamp(40px,6vw,90px)!important}
+.public-logos .logo-marquee{margin-top:0}
+
+/* home: short public-gardens text beside the client logos (Hagai 24.11) */
+.public-teaser{max-width:60ch;margin:clamp(18px,2.5vw,32px) 0 0;color:var(--ink-2);font-size:clamp(1.05rem,1rem + .3vw,1.2rem);line-height:1.7}
+.public-teaser .link{white-space:nowrap}
+
+/* two photos side by side, the caption on the photo itself (Hagai 24.11) */
+.collage.pair{display:grid!important;grid-template-columns:1fr 1fr;gap:clamp(8px,1vw,14px);position:relative;height:auto!important;min-height:0!important;aspect-ratio:auto!important}
+.collage.pair figure{position:relative!important;inset:auto!important;width:auto!important;height:auto!important;margin:0!important;padding:0!important;border:0!important;box-shadow:none!important;transform:none!important;aspect-ratio:4/5;overflow:hidden;background:var(--cream-2)}
+.collage.pair figure img{position:absolute;inset:0;width:100%!important;height:100%!important;object-fit:cover;aspect-ratio:auto!important}
+.collage.pair figure::after{content:"";position:absolute;inset:auto 0 0 0;height:45%;background:linear-gradient(to top,rgba(10,10,8,.55),rgba(10,10,8,0));pointer-events:none}
+.collage.pair figcaption.stamp{position:absolute!important;inset:auto 0 0 0!important;z-index:2;margin:0!important;padding:0 clamp(14px,1.6vw,22px) clamp(12px,1.4vw,20px)!important;background:none!important;color:#fff!important;font-family:var(--he-display);font-size:clamp(1rem,.9rem + .4vw,1.25rem)!important;text-align:start;transform:none!important;box-shadow:none!important;border:0!important}
+
+/* "גינה מתחילה בהתבוננות": smaller text (Hagai 24.11) */
+.approach .lede{font-size:clamp(1rem,.95rem + .2vw,1.1rem)!important;line-height:1.75}
+
+/* running text in a Hebrew serif, Frank Ruhl Libre (free font, OFL), kept in the site's own folder (Hagai 24.11).
+   Headings, menu, buttons, labels and forms stay in Carmela. */
+@font-face{font-family:"Frank Ruhl Libre";font-style:normal;font-weight:300 900;font-display:swap;src:url("fonts/frank-ruhl-libre-hebrew.woff2") format("woff2");unicode-range:U+0307-0308,U+0590-05FF,U+200C-2010,U+20AA,U+25CC,U+FB1D-FB4F}
+@font-face{font-family:"Frank Ruhl Libre";font-style:normal;font-weight:300 900;font-display:swap;src:url("fonts/frank-ruhl-libre-latin.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+:root{--he-serif:"Frank Ruhl Libre","David Libre","Times New Roman",serif}
+main p,main li,main .lede,main blockquote,main .prose,main figcaption p,.quotes-rot .quote p,.public-teaser{font-family:var(--he-serif)!important;font-size-adjust:none}
+main p,main li{letter-spacing:0}
+main .lede{line-height:1.7}
+/* keep these in the sans face: they are labels, buttons and form parts, not running text */
+main .stamp,main .museum,main .btn,main .link,main .chips,main .field,main label,main .eyebrow,main .crumbs,main .hello-text,main .hero-line,main .spoem,main .gplace,main .gpoem,main .client,main .pill,main .tag,main .todo,main .direct,main .actions,main form p,main .hello-name{font-family:var(--he-display)!important}
+
+/* running text in dark olive on cream, like Hagai's reference (24.11) */
+:root{--cream:#F8F4E7;--text-olive:#53634C}
+body{background-color:var(--cream)}
+main p,main li,main .lede,main .lede.muted,main .muted,main blockquote,.quotes-rot .quote p,.public-teaser,main figcaption p{color:var(--text-olive)!important}
+main .hero-line,main .hero-line span,main .spoem,main .gpoem,main .gplace{color:#fff!important}
+/* on the yellow opening everything stays black */
+main .hello p,main .hello .hello-name,main .hello .hello-name *,main .hello .hello-text{color:#1E1F1A!important}
+.public-teaser-h{margin:0;font-size:clamp(2rem,1.3rem + 2.4vw,3.4rem);line-height:1.1;max-width:18ch;text-wrap:balance}
+.public-teaser-h+.public-teaser{margin-top:16px}
+
+/* Itai with the dog: as large as the only copy allows (Hagai 24.11) */
+.dog-big{position:relative;margin:clamp(40px,6vw,96px) auto;width:min(100%,1200px);aspect-ratio:1065/710;overflow:hidden}
+.dog-big img{display:block;width:100%;height:100%;object-fit:cover}
+@media (max-width:760px){.dog-big{width:100%;margin-block:32px}}
+.dog-big{aspect-ratio:2.2/1!important}
+.dog-big img{object-position:50% 55%}
+@media (max-width:760px){.dog-big{aspect-ratio:16/10!important}}
+
+/* team photo bigger (Hagai 24.11) */
+.team-photo{max-width:min(100%,640px)!important;width:100%}
+
+/* team photo edge to edge (Hagai 24.11) */
+.team-band{position:relative;margin:0;width:100%;aspect-ratio:2.2/1;overflow:hidden;background:var(--cream-2)}
+.team-band img{display:block;width:100%;height:100%;object-fit:cover;object-position:50% 62%}
+@media (max-width:760px){.team-band{aspect-ratio:4/3}}
+/* "who will come to you" without the side photo: the text starts on the right */
+.itai .itai-copy{grid-column:1 / span 8!important}
+@media (max-width:860px){.itai .itai-copy{grid-column:1 / -1!important}}
+/* team photo: column width, whole photo (no crop) */
+.team-photo img{aspect-ratio:auto!important;height:auto!important;object-fit:contain!important}
+
+/* home: the gardens grid, with a link to all gardens under it (Hagai 24.11) */
+.home-grid-more{text-align:center;padding:clamp(14px,2vw,26px) 0 clamp(4px,1vw,10px)}
+.home-grid-more .link{color:#1E1F1A;font-family:var(--he-display);font-size:clamp(1.05rem,1rem + .3vw,1.25rem)}
+
+.team-text{max-width:60ch;margin:16px 0 0}
+
+/* team photo: half the screen, flush to the right edge, whole photo (Hagai 24.11) */
+.team-side{position:relative;margin:0 0 clamp(48px,7vw,110px);width:50%;margin-inline-start:0;margin-inline-end:auto}
+.team-side img{display:block;width:100%;height:auto}
+@media (max-width:760px){.team-side{width:86%}}
+
+/* form fields and send button: thin black frame like the header button, slimmer (Hagai 24.11) */
+.contact.humus input:not([type=radio]):not([type=file]),.contact.humus select,.contact.humus textarea{border:1.5px solid #1E1F1A!important;min-height:46px!important;padding:10px 16px!important}
+.contact.humus .lead-min .lead-last button[type=submit]{min-height:46px!important;box-shadow:inset 0 0 0 1.5px #1E1F1A!important}
+
+/* opening logo: larger framed tagline, about 60% of the name height, like the updated logo file (Hagai 24.11) */
+.hello-name .pill{font-size:clamp(1.2rem,5vw,4.6rem)!important}
+
+/* "נוף וחורש" on one line, sized with the framed tagline to the proportions of the logo file */
+.hello-name .big{font-size:16.5vw!important;white-space:nowrap}
+.hello-name .pill{font-size:3vw!important;margin-top:.9em!important}
+@media (max-width:860px){.hello-name .big{font-size:22.5vw!important}.hello-name .pill{font-size:clamp(1rem,4.4vw,1.6rem)!important;margin-top:0!important}}
+
+/* framed tagline a bit smaller, like the latest logo file */
+.hello-name .pill{font-size:2.5vw!important;margin-top:1.1em!important}
+@media (max-width:860px){.hello-name .pill{font-size:clamp(.95rem,4vw,1.4rem)!important;margin-top:0!important}}
+
+/* header logo without nikud, a small dot between name and tagline (Hagai 24.11) */
+.wm i{font-size:.55em;align-self:center;color:#1E1F1A}
+
+/* opening logo exactly like the file: frame top aligned with the top of the letters, frame half the letter height, wider gap (Hagai 24.11) */
+.hello-name{gap:3.7vw!important;align-items:flex-start!important}
+.hello-name .pill{font-size:2.3vw!important;margin-top:.85vw!important;border-width:2px!important}
+@media (max-width:860px){.hello-name{gap:12px!important}.hello-name .pill{font-size:clamp(.95rem,4vw,1.4rem)!important;margin-top:0!important;border-width:1.5px!important}}
+
+.hello-text .hello-serif{font-family:var(--he-serif)!important}
+
+/* section titles in bold, every word (Hagai 24.11) */
+main h2,main h1:not(.hello-text){font-weight:700!important}
+
+.hello-text strong{font-weight:700}
+
+/* a single large word in the empty space beside a staggered photo (Hagai 24.11) */
+.stagger figure.has-word{overflow:visible}
+.stagger .sword{position:absolute;right:calc(100% + clamp(20px,4vw,72px));top:50%;transform:translateY(-50%);font-family:var(--he-display);font-weight:700;font-size:clamp(2.6rem,1.5rem + 4.4vw,6.5rem);line-height:1;color:var(--ink);white-space:nowrap;pointer-events:none}
+@media (max-width:760px){.stagger .sword{font-size:2.4rem;right:calc(100% + 12px)}}
+.stagger figure.word-right .sword{right:auto;left:calc(100% + clamp(20px,4vw,72px))}
+@media (max-width:760px){.stagger figure.word-right .sword{left:calc(100% + 10px);font-size:1.5rem;writing-mode:vertical-rl}}
+
+
+/* words beside the photos: soft olive like the running text, smaller, top aligned with the top edge of the photo (Hagai 24.11) */
+.stagger .sword{color:var(--text-olive)!important;font-size:clamp(2rem,1.2rem + 3vw,4.4rem)!important;top:0!important;transform:translateY(-.14em)!important}
+
+/* team: photo on the right half (to the edge), the text beside it on the left (Hagai 24.11) */
+.team-row-sec{padding-inline:0!important}
+.team-row{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:clamp(28px,5vw,90px)}
+.team-row .team-side{width:100%!important;margin:0!important}
+.team-row .itai-copy{grid-column:auto!important;padding-inline-end:max(16px,var(--gutter,40px));max-width:60ch}
+@media (max-width:860px){.team-row{grid-template-columns:1fr}.team-row .team-side{width:86%!important}.team-row .itai-copy{padding-inline:max(16px,var(--gutter,20px))}}
+
+/* contact form: much finer and narrower (Hagai 24.11) */
+.contact.humus form.lead-min{max-width:440px!important;gap:8px!important}
+.contact.humus .lead-min input:not([type=radio]):not([type=file]){border:1px solid #1E1F1A!important;min-height:38px!important;height:38px;padding:6px 12px!important;font-size:.92rem!important}
+.contact.humus .lead-min .lead-last{gap:10px!important}
+.contact.humus .lead-min .lead-last button[type=submit]{min-height:38px!important;height:38px;font-size:.92rem!important;font-weight:600!important;letter-spacing:.02em;box-shadow:inset 0 0 0 1px #1E1F1A!important;padding:0 16px!important}
+
+/* home contact: WhatsApp icon only, like the reference */
+.contact .wa-only{margin:14px 0 0}
+.contact .wa-only a{display:inline-flex;color:#6B6A60}
+.contact .wa-only a:hover{color:var(--olive)}
+.contact .wa-only svg{width:34px;height:34px}
+
+/* team photo: framed on the people, with space from the screen edge (Hagai 24.11) */
+.team-row{padding-inline-start:max(16px,var(--gutter,40px))}
+.team-row .team-side{overflow:hidden;aspect-ratio:4/5}
+.team-row .team-side img{height:100%!important;object-fit:cover;transform:scale(1.2);transform-origin:30% 82%}
+
+/* team photo: the whole photo, smaller, further from the right edge (Hagai 24.11) */
+.team-row{padding-inline-start:clamp(40px,8vw,140px)!important}
+.team-row .team-side{aspect-ratio:auto!important;overflow:visible;width:78%!important;justify-self:start}
+.team-row .team-side img{height:auto!important;transform:none!important;object-fit:contain}
+@media (max-width:860px){.team-row{padding-inline-start:max(16px,var(--gutter,20px))!important}.team-row .team-side{width:100%!important}}
+
+.team-row .team-side{width:70%!important}
+@media (max-width:860px){.team-row .team-side{width:90%!important}}
+
+/* Hagai 24.11: no line above the first step (תכנון) */
+.method .layer.l1{border-top:0!important}
