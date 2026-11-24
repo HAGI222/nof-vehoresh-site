@@ -334,3 +334,40 @@ h3{font-size:clamp(22px,1.9vw,28px)}
   .foot{padding-bottom:74px}
   .foot-bottom{align-items:flex-start}
 }
+
+/* ---------- footer, second take: same layout as the version-2 footer, in the version-3 colours ---------- */
+.foot{padding:clamp(56px,7vw,104px) var(--gut) clamp(48px,5vw,76px);font-family:var(--display);font-size:19px;line-height:1.75}
+.foot-grid{display:grid;grid-template-columns:auto auto auto 1fr;align-items:start;gap:0 clamp(40px,5.5vw,100px)}
+.foot p{margin:0 0 18px}
+.foot .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block}
+.f-contact{padding-inline-end:clamp(32px,4.5vw,70px);border-inline-end:1px solid rgba(255,253,249,.4);padding-bottom:6px}
+.f-icons{display:flex;gap:20px;margin:30px 0 0 !important}
+.f-icons a{display:inline-flex;opacity:.9}
+.f-icons a:hover{opacity:1}
+.f-icons svg{width:30px;height:30px}
+.f-links{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.f-mark{justify-self:end;align-self:end;opacity:.6;filter:brightness(0) invert(1)}
+.f-mark:hover{opacity:.9}
+.f-mark img{width:64px;height:64px}
+.wa{position:fixed;right:22px;bottom:22px;z-index:45;width:58px;height:58px;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;box-shadow:0 10px 24px -8px rgba(20,14,9,.55);transition:transform .2s}
+.wa:hover{transform:scale(1.05)}
+.wa svg{width:30px;height:30px}
+.menu-open .wa,.menu-open .totop{display:none}
+@media (max-width:767px){
+  .foot{padding:52px var(--gut) 96px;font-size:18px}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:34px 20px}
+  .f-contact{grid-column:1/-1;border-inline-end:0;border-bottom:1px solid rgba(255,253,249,.4);padding:0 0 28px}
+  .f-mark{grid-column:1/-1;justify-self:start}
+  .wa{right:16px;bottom:16px;width:52px;height:52px}
+}
+
+/* ---------- type, as in version 2: Carmela bold with open spacing for headings, Frank Ruhl Libre regular for text ---------- */
+body{font-weight:400}
+h1,h2{font-weight:700;letter-spacing:.09em;line-height:1.16}
+h3,.steps h3,.card h3,.person h3,.facts h3{font-weight:700;letter-spacing:.04em}
+.invite h2,.sec.credits h2{letter-spacing:.06em}
+.work-cap h3{font-weight:700;letter-spacing:.12em}
+.quote blockquote{font-weight:500}
+@media (max-width:767px){
+  h1,h2{letter-spacing:.06em}
+}

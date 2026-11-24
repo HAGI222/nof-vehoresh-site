@@ -51,12 +51,4 @@
   } else {
     items.forEach(function (el) { el.classList.add('in'); });
   }
-
-  // garden-journal sign-up: not connected to a mailing list yet
-  var news = document.querySelector('.news form');
-  if (news) news.addEventListener('submit', function (e) {
-    e.preventDefault();
-    var note = document.querySelector('.news .note');
-    if (note) note.textContent = 'ההרשמה ליומן תיפתח בקרוב.';
-  });
 })();
