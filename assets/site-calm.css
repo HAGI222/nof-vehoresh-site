@@ -834,3 +834,6 @@ main h2,main h1:not(.hello-text){font-weight:700!important}
 
 .team-row .team-side{width:70%!important}
 @media (max-width:860px){.team-row .team-side{width:90%!important}}
+
+/* Hagai 24.11: no line above the first step (תכנון) */
+.method .layer.l1{border-top:0!important}
