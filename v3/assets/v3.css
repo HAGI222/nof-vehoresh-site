@@ -384,3 +384,26 @@ h3,.steps h3,.card h3,.person h3,.facts h3{font-weight:700;letter-spacing:.04em}
   .logo{font-size:clamp(30px,9vw,38px)}
   .logo i,.logo span{display:none}
 }
+
+/* ---------- footer, third take: sand background picked by Hagai (#f1edd6), brown text ---------- */
+.foot{background:#f1edd6;color:var(--brown-deep)}
+.f-contact{border-inline-end-color:rgba(139,105,78,.38)}
+.f-icons a{opacity:1;color:var(--brown)}
+.f-icons a:hover{color:var(--brown-deep)}
+.f-mark{opacity:1;filter:none;display:block;width:64px;height:64px;background:var(--brown);-webkit-mask:url(admati-favicon-beetle.svg) center/contain no-repeat;mask:url(admati-favicon-beetle.svg) center/contain no-repeat;opacity:.75}
+.f-mark:hover{opacity:1}
+.f-mark img{opacity:0}
+@media (max-width:767px){
+  .f-contact{border-bottom-color:rgba(139,105,78,.38)}
+}
+
+/* ---------- buttons in the olive green picked by Hagai (#566a4b, the version-2 button colour) ---------- */
+:root{--olive:#566a4b;--olive-hi:#4a5d40}
+.btn{background:var(--olive)}
+.btn:hover{background:var(--olive-hi)}
+.btn-line{color:var(--olive)}
+.btn-line:hover{background:var(--olive);color:var(--cream);border-color:var(--olive)}
+.brown .btn-line{color:var(--cream)}
+.brown .btn-line:hover{background:var(--cream);color:var(--brown);border-color:var(--cream)}
+.hdr.solid .cta,.plain .hdr .cta,.menu a.cta,.menu-open .hdr .cta{color:var(--olive)}
+.cta:hover,.hdr.solid .cta:hover,.plain .hdr .cta:hover,.menu a.cta:hover{background:var(--olive);color:var(--cream);border-color:var(--olive)}
