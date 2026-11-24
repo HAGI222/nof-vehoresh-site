@@ -1,0 +1,855 @@
+{
+ "projects": {
+  "zichron-landau": {
+   "town": "זכרון יעקב",
+   "title": "גינה פרטית, לנדאו. צילום: מעיין חלף"
+  },
+  "zichron-eden": {
+   "town": "זכרון יעקב",
+   "title": "מלון עדן"
+  },
+  "caesarea": {
+   "town": "קיסריה",
+   "title": "שיקום ופיתוח גינה פרטית עם בריכה אחרי שיפוץ (מיקה ויפתח / מלאני). צילום מקצועי (Eliora ILPI). קבצי site- הם הגרסאות החתוכות מהאתר admatigardens, וחלקם כפולים לקבצי caesarea-NN"
+  },
+  "haifa-shimon-ella": {
+   "town": "חיפה",
+   "title": "חצר פרטית (שמעון ואלה)"
+  },
+  "haifa-balconies": {
+   "town": "חיפה",
+   "title": "גינות מרפסת"
+  },
+  "haifa-concrete-planters": {
+   "town": "חיפה",
+   "title": "אדניות בטון במרפסות"
+  },
+  "atlit": {
+   "town": "עתלית",
+   "title": "מבואת כניסה (איתי ונופר)"
+  },
+  "ramat-hasharon-harushet": {
+   "town": "רמת השרון",
+   "title": "חרושת 18"
+  },
+  "ramat-hasharon-liber": {
+   "town": "רמת השרון",
+   "title": "אדניות בכניסה לבניין משרדים (ליבר בקרה)"
+  },
+  "parzon": {
+   "town": "לא ידוע",
+   "title": "פרזון 19"
+  },
+  "tel-aviv-secret": {
+   "town": "תל אביב",
+   "title": "גינה סודית"
+  },
+  "erika-balcony": {
+   "town": "לא ידוע",
+   "title": "מרפסת הירק של אריקה"
+  },
+  "between-public-home": {
+   "town": "לא ידוע",
+   "title": "בין שצ\"פ לגינה הביתית"
+  },
+  "anais": {
+   "town": "לא ידוע",
+   "title": "אנאיס"
+  },
+  "iphone-unsorted": {
+   "town": "לא ידוע",
+   "title": "תמונות מהאייפון 10.6, בלי שם פרויקט"
+  },
+  "team": {
+   "town": "",
+   "title": "הצוות"
+  }
+ },
+ "photos": [
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-1.webp",
+   "size": [
+    1400,
+    933
+   ],
+   "place": "עמוד הבית · פתיחה",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-4.webp",
+   "size": [
+    1400,
+    933
+   ],
+   "place": "עמוד הבית · פתיחה",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-2.webp",
+   "size": [
+    1400,
+    933
+   ],
+   "place": "חדרי הגינה · השביל",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-6.webp",
+   "size": [
+    1400,
+    933
+   ],
+   "place": "חדרי הגינה · שולחן האירוח",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-5.webp",
+   "size": [
+    1400,
+    933
+   ],
+   "place": "גינות שהקמנו",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-8.webp",
+   "size": [
+    1400,
+    933
+   ],
+   "place": "גינות שהקמנו",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "atlit",
+   "file": "atlit/atlit-before.webp",
+   "size": [
+    1100,
+    1467
+   ],
+   "place": "לפני ואחרי",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "atlit",
+   "file": "atlit/atlit-after.webp",
+   "size": [
+    1100,
+    1467
+   ],
+   "place": "לפני ואחרי",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/site-pool-garden-wide.webp",
+   "size": [
+    1800,
+    1197
+   ],
+   "place": "עמוד הבית · פתיחה",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/site-pool-garden-subtropic.webp",
+   "size": [
+    1600,
+    1064
+   ],
+   "place": "חידוש גינות",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/site-pool-garden-herb-planters.webp",
+   "size": [
+    1600,
+    1064
+   ],
+   "place": "חדרי הגינה · גינת הירק והתבלין",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/site-pool-garden-detail-1.webp",
+   "size": [
+    998,
+    1500
+   ],
+   "place": "גינות שהקמנו",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/site-pool-garden-detail-2.webp",
+   "size": [
+    1500,
+    998
+   ],
+   "place": "גינות שהקמנו",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "ramat-hasharon-liber",
+   "file": "ramat-hasharon-liber/ramat-hasharon-planters-1.webp",
+   "size": [
+    1125,
+    1500
+   ],
+   "place": "גינון ציבורי",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "team",
+   "file": "team/team-group.webp",
+   "size": [
+    1170,
+    1429
+   ],
+   "place": "מי אנחנו · עמוד הבית",
+   "source": "admatigardens.netlify.app"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-landau-01.webp",
+   "size": [
+    2000,
+    1333
+   ],
+   "place": "",
+   "source": "drive:1NEdoUXjPHc5vf5-6cJ5ay9ejNHDjU68-"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-landau-02.webp",
+   "size": [
+    2000,
+    1333
+   ],
+   "place": "",
+   "source": "drive:1tqD1lSLBGGJ1zMM62iLAm3avyXKCL6jx"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-landau-03.webp",
+   "size": [
+    2000,
+    1333
+   ],
+   "place": "",
+   "source": "drive:1N1GkL4mb1C21BggKmTfwPrbP9ZLWU8rI"
+  },
+  {
+   "project": "zichron-landau",
+   "file": "zichron-landau/zichron-landau-04.webp",
+   "size": [
+    1200,
+    1600
+   ],
+   "place": "",
+   "source": "drive:1vQg19cmpXlmEv94qR7zw3Suhlx8Y0qhX"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-01.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:1Hxb3gaHcnabeBgG0sMG1XDCx3F55qZfp"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-02.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:1wTUjkZz1kbdbRXRFheg-fsTh82SjmhUw"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-03.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:1COSbh6Jf9XyBlJAZMwOJJ4YKn-Soa2KD"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-04.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:199N8kJ84DhVukorVWEkrB9Mm6srBgz-G"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-05.webp",
+   "size": [
+    1331,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1afcrsLVu3krqD66lJG046ptCuSN9NlFl"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-06.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:18Yb2NVDfzgMiK14UNmFkPQ7gvJygaWhv"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-07.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:1CE54No9JDjD8fkp5chhuZTYbCDi58jYh"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-08.webp",
+   "size": [
+    1331,
+    2000
+   ],
+   "place": "",
+   "source": "drive:12uejjIdkLwfVz_IjKAu6rgskbyQ17QjD"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-09.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:192E8ZU9CPAoPlYMYNAo4L8M_ZQVe3Uct"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-10.webp",
+   "size": [
+    1331,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1cMubaFHU-n1Z9OkDqu4zBlnIwclgBuK4"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-11.webp",
+   "size": [
+    2000,
+    1331
+   ],
+   "place": "",
+   "source": "drive:1mlPdQjVCFYc20_G82UKuyhKmccxFK0eb"
+  },
+  {
+   "project": "caesarea",
+   "file": "caesarea/caesarea-12.webp",
+   "size": [
+    1331,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1gmzW7Yh_SZ4v8zGjZ2k50ePCSRDPSFv0"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-01.webp",
+   "size": [
+    1125,
+    2000
+   ],
+   "place": "",
+   "source": "drive:17JQiFwbjAMUxbR9tN5gw1-EM1MLCYtaH"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-02.webp",
+   "size": [
+    1125,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1bTLVNYLXz4nQi_YszV368FWE0seS4WmJ"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-03.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1mhtHGIYATJuMjgSFvn-cP9luT4Bq74CJ"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-04.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1Dn0EJEWjtXeMxeaHfLvcEqP1VqR8-Ju_"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-05.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1o3PB6ipaYHp7n03m78vZKEQUCzSq_2hY"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-06.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1WS0F3QitESbT8hPVvWrF-LdWe7on0fP6"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-07.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:18LiZsViaOcDM27JhwaZPapKYs2RmlF1x"
+  },
+  {
+   "project": "haifa-shimon-ella",
+   "file": "haifa-shimon-ella/haifa-shimon-ella-08.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1ILsgEHnFIDl1IzhiIkZPcX4a8BbrYQnu"
+  },
+  {
+   "project": "haifa-balconies",
+   "file": "haifa-balconies/haifa-balconies-01.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1qAjM2oqO0-29D2qj8nN5xfqLqIjhmvqa"
+  },
+  {
+   "project": "haifa-balconies",
+   "file": "haifa-balconies/haifa-balconies-02.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1aCvZr3lvdwa2Os2zso04DCIq-UhwoQFJ"
+  },
+  {
+   "project": "haifa-concrete-planters",
+   "file": "haifa-concrete-planters/haifa-concrete-planters-01.webp",
+   "size": [
+    1200,
+    1600
+   ],
+   "place": "",
+   "source": "drive:16SwoOFpC91vzIFAAOCxSsk7CaJV70A8Y"
+  },
+  {
+   "project": "atlit",
+   "file": "atlit/atlit-01.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:18oDLA4Mbtpo4pJ7qA2c_RFtgQllMGaiO"
+  },
+  {
+   "project": "atlit",
+   "file": "atlit/atlit-02.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1p58TDJs62kaAKcf8VrbVXFhp8UXjREG7"
+  },
+  {
+   "project": "atlit",
+   "file": "atlit/atlit-03.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1f_Ic8M8DTP1RX8Up04rCxDy_TUTCKY4-"
+  },
+  {
+   "project": "ramat-hasharon-harushet",
+   "file": "ramat-hasharon-harushet/ramat-hasharon-harushet-01.webp",
+   "size": [
+    1086,
+    1448
+   ],
+   "place": "",
+   "source": "drive:12XkyPJqnRj0-fDYBYlsIWaPi3u4kOamX"
+  },
+  {
+   "project": "ramat-hasharon-harushet",
+   "file": "ramat-hasharon-harushet/ramat-hasharon-harushet-02.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1IC2vJLzhW9DlqtavkHKbTjcmba-wwpVK"
+  },
+  {
+   "project": "ramat-hasharon-harushet",
+   "file": "ramat-hasharon-harushet/ramat-hasharon-harushet-03.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1NnHH_U4aqxKpeVXuD2jPBZvvHjWmZehD"
+  },
+  {
+   "project": "ramat-hasharon-harushet",
+   "file": "ramat-hasharon-harushet/ramat-hasharon-harushet-04.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1iTad3UtFNUhh5KKy1ywyIZuHOv3QnCRI"
+  },
+  {
+   "project": "ramat-hasharon-harushet",
+   "file": "ramat-hasharon-harushet/ramat-hasharon-harushet-05.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:18xX3p8T_JFDbrUA9pKtcfkD7FAwDXmbE"
+  },
+  {
+   "project": "ramat-hasharon-harushet",
+   "file": "ramat-hasharon-harushet/ramat-hasharon-harushet-06.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1aLIh_P1YHKDoxavdYJh_82HMEbf_9UvE"
+  },
+  {
+   "project": "ramat-hasharon-liber",
+   "file": "ramat-hasharon-liber/ramat-hasharon-liber-01.webp",
+   "size": [
+    1200,
+    1600
+   ],
+   "place": "",
+   "source": "drive:1SeuBZZ2u7lyFOFVwblO0_tceAwOIwfDR"
+  },
+  {
+   "project": "zichron-eden",
+   "file": "zichron-eden/zichron-eden-01.webp",
+   "size": [
+    1200,
+    1600
+   ],
+   "place": "",
+   "source": "drive:1glirQ4Kf7OU9SOp10yX_-DVi4qqQ-Xxz"
+  },
+  {
+   "project": "zichron-eden",
+   "file": "zichron-eden/zichron-eden-02.webp",
+   "size": [
+    1200,
+    1600
+   ],
+   "place": "",
+   "source": "drive:1Q2evqqhciMX5bYGu8i8OUeY6ZsnfkMJ1"
+  },
+  {
+   "project": "parzon",
+   "file": "parzon/parzon-01.webp",
+   "size": [
+    1200,
+    1600
+   ],
+   "place": "",
+   "source": "drive:1kgyBL94euQrtOB6YAQzCGkPq_kNaRhy-"
+  },
+  {
+   "project": "tel-aviv-secret",
+   "file": "tel-aviv-secret/tel-aviv-secret-01.webp",
+   "size": [
+    738,
+    1600
+   ],
+   "place": "",
+   "source": "drive:1_3xU22MddCjFQNIZ2h5rqP4KIN7Ooiw9"
+  },
+  {
+   "project": "tel-aviv-secret",
+   "file": "tel-aviv-secret/tel-aviv-secret-02.webp",
+   "size": [
+    1600,
+    1200
+   ],
+   "place": "",
+   "source": "drive:1Vfj5FdArRGV_FrtrtjzeJy7x9Lvu8O2Q"
+  },
+  {
+   "project": "tel-aviv-secret",
+   "file": "tel-aviv-secret/tel-aviv-secret-03.webp",
+   "size": [
+    1564,
+    1564
+   ],
+   "place": "",
+   "source": "drive:1qluSRiZNdhe-o-3Sp5SCkHlMc1IAXS5n"
+  },
+  {
+   "project": "tel-aviv-secret",
+   "file": "tel-aviv-secret/tel-aviv-secret-04.webp",
+   "size": [
+    1200,
+    1600
+   ],
+   "place": "",
+   "source": "drive:1mvX_uWWwRPswKRQvDv1N5x1aqBd3gWft"
+  },
+  {
+   "project": "tel-aviv-secret",
+   "file": "tel-aviv-secret/tel-aviv-secret-05.webp",
+   "size": [
+    1600,
+    1200
+   ],
+   "place": "",
+   "source": "drive:1wrL0CvCfOhxgHiRMcaElXAwo4KkTQDPL"
+  },
+  {
+   "project": "erika-balcony",
+   "file": "erika-balcony/erika-balcony-01.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1UeE4ScSJBe-Ltmvte2M_JpV_A7QU1CEx"
+  },
+  {
+   "project": "erika-balcony",
+   "file": "erika-balcony/erika-balcony-02.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1U52vPIqTh-XYVpG-rNXT2vF0RriothEy"
+  },
+  {
+   "project": "between-public-home",
+   "file": "between-public-home/between-public-home-01.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1D7aXHwlvYfHXETcLFsBUCvxSeWZ0Ac80"
+  },
+  {
+   "project": "between-public-home",
+   "file": "between-public-home/between-public-home-02.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:15REWElvgptcBmLVsrEkaR1MbFm4n7MqL"
+  },
+  {
+   "project": "between-public-home",
+   "file": "between-public-home/between-public-home-03.webp",
+   "size": [
+    2000,
+    1500
+   ],
+   "place": "",
+   "source": "drive:1NuSrUtdEbCZOjdjERipMG_dfI9MpuXAF"
+  },
+  {
+   "project": "anais",
+   "file": "anais/anais-01.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1FpXGrt-mRnTN3rnew1Ng1gvG_jYqtmQP"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-01.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1jrPsI3Dc62eUi-KbWfk5bPHpmNUpwi8d"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-02.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1YJwbaWT11vKibSJ4wHYGAd8YWuLtlzhv"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-03.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:18GfO6UUucquhsBsUYBjg857ckKc7zUam"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-04.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1Gno3ZMflEDM3r9oeF5LkdSwPn7a6WGdE"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-05.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1t_OpUtAgkpdCvLrywwukHpeFdWCptyPZ"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-06.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:17z4Je0uwU5e06QTfMtsoWX9yGOP_8i48"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-07.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1v3oeTAlReO5l256NrA6S8LZQJgVS_co3"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-08.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1FJ1e9icZuiC_RWlABhHWXLMX7b_9KgQy"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-09.webp",
+   "size": [
+    1170,
+    1551
+   ],
+   "place": "",
+   "source": "drive:1cU6juQeUdl-y94K9esujz1Mx7csl7gkq"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-10.webp",
+   "size": [
+    1600,
+    1200
+   ],
+   "place": "",
+   "source": "drive:1zZZcqzVDIVI9wAoP-7WJF1fD3tixJykB"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-11.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1IFZM_EELW-bMLGTXCcBiXjlFLH8GoT6G"
+  },
+  {
+   "project": "iphone-unsorted",
+   "file": "iphone-unsorted/iphone-unsorted-12.webp",
+   "size": [
+    1500,
+    2000
+   ],
+   "place": "",
+   "source": "drive:1JjZgaG1OegVN628ZdOpKJo3_n9xsCAp8"
+  }
+ ],
+ "notes": [
+  "tel-aviv-secret-01 הוא צילום מסך, איכות נמוכה",
+  "iphone-unsorted: בלי שם פרויקט. 01-02 צוות בעבודה, 03-04 מרווה סגולה, 05-06 ערוגה ציבורית מול קיר זכוכית, 10 גינת ירק",
+  "haifa-yard (סקיצה, לפני ואחרי) לא נבחרו"
+ ]
+}
