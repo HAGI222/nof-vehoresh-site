@@ -990,3 +990,19 @@ body::before{right:auto;left:0}
 /* clients row: the Bat Shlomo logo is tall (a silhouette above the name), so it gets more height than the wide ones */
 .logos img[src*="bat-shlomo"]{height:92px}
 @media (max-width:767px){ .logos img[src*="bat-shlomo"]{height:74px} }
+
+/* two light colours across the site (Hagai 25.11): a near-white with a green tint (#fafaf0, the option he chose)
+   as the general ground, and the existing greenish cream (#f1edd6) for the sections that should stand apart */
+:root{--white:#fafaf0}
+html,body,.menu,.sec,.strip,.split,.works,.mosaic,.quote,.bleed,.cards-sec,.people,.facts,.logos,.contact,.plants,.g-page,.shots,.pins,.l-grid,.p-page,.p-nav,.g-grid,.process{background:var(--white)}
+.sec.brown,.split.brown{background:var(--brown)}
+.sec.g-intro,.g-run.home,.team,.faq,.foot,.cards-sec.roll{background:var(--paper)}
+.hdr.solid,.plain .hdr{background:rgba(250,250,240,.9)}
+.menu-open .hdr{background:var(--white)}
+.totop{background:rgba(250,250,240,.92)}
+.facts > div,.shots figcaption{background:var(--paper)}
+.pin,.l-card .pic,.p-pic,.p-thumbs a{background:var(--paper)}
+/* services page: steps on the cream, garden cards on the near-white, so the two creams (cards, questions) do not touch */
+.process{background:var(--paper)}
+.cards-sec.roll{background:var(--white)}
+.steps::before{background:rgba(139,105,78,.4)}
