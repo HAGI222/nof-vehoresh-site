@@ -1006,3 +1006,7 @@ html,body,.menu,.sec,.strip,.split,.works,.mosaic,.quote,.bleed,.cards-sec,.peop
 .process{background:var(--paper)}
 .cards-sec.roll{background:var(--white)}
 .steps::before{background:rgba(139,105,78,.4)}
+
+/* invitation card, brighter (Hagai 25.11): the card in the near-white, and almost no dark wash over the trees behind it */
+.invite-card{background:var(--white)}
+.invite-bg::after{background:rgba(22,15,9,.05)}
