@@ -80,7 +80,7 @@
       dots.appendChild(b);
     });
     list.classList.add('rot');
-    list.parentNode.appendChild(dots);
+    list.insertAdjacentElement('afterend', dots);
     show(0);
     ['mouseenter', 'focusin'].forEach(function (ev) {
       list.parentNode.addEventListener(ev, function () { held = true; clearInterval(timer); });
