@@ -654,3 +654,50 @@ body{font-family:var(--display);font-weight:400}
   .shots figure{margin-bottom:8px}
   .shots figcaption{padding:9px 11px 10px;font-size:14px}
 }
+
+/* home: the plants heading with the "learning area" button beside it (Hagai 25.11) */
+.plants-head{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 24px;padding-inline:var(--gut);margin-bottom:clamp(40px,4.6vw,76px)}
+.plants .plants-head h2{padding:0;margin:0}
+.plants-head .btn{margin-top:0}
+
+/* learning area: all the plants */
+.l-grid{background:var(--paper);padding:0 var(--gut) clamp(60px,6vw,100px);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:52px 22px}
+.l-card{text-align:center;min-width:0}
+.l-card .pic{display:block;aspect-ratio:5/7;overflow:hidden;border-radius:var(--round);background:#fbf8ee;border:1px solid rgba(139,105,78,.28)}
+.l-card img{width:100%;height:100%;object-fit:contain;transition:transform .9s ease}
+.l-card .pic:hover img{transform:scale(1.03)}
+.l-card h3{margin:18px 0 2px;font-size:clamp(20px,1.6vw,25px)}
+.l-card h3 a{text-decoration:none}
+.latin{font-family:"Frank Ruhl Libre",Georgia,serif;font-style:italic;color:var(--brown);letter-spacing:.01em}
+.l-card .latin{margin:0 0 8px;font-size:16.5px}
+.l-card p{margin:0 auto;max-width:27ch;font-size:16px;line-height:1.6;color:var(--soft)}
+.l-card .more{margin-top:14px;padding:10px 24px;font-size:15px}
+@media (max-width:1100px){ .l-grid{grid-template-columns:repeat(3,minmax(0,1fr))} }
+@media (max-width:767px){
+  .l-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 12px}
+  .l-card h3{font-size:18.5px;margin-top:12px}
+  .l-card .latin{font-size:14.5px}
+  .l-card p{font-size:14.5px}
+  .l-card .more{padding:9px 18px;font-size:14.5px}
+}
+
+/* learning area: one plant */
+.p-page{background:var(--paper);padding:clamp(112px,9.5vw,150px) var(--gut) clamp(40px,4vw,64px);display:grid;grid-template-columns:minmax(0,36%) minmax(0,1fr);gap:clamp(30px,5.4vw,90px);align-items:start}
+.p-pic{position:sticky;top:96px;margin:0;border-radius:var(--round);overflow:hidden;background:#fbf8ee;border:1px solid rgba(139,105,78,.28)}
+.p-pic img{display:block;width:100%;height:auto}
+.p-body{max-width:680px}
+.p-body h1{margin-bottom:.15em}
+.p-body .latin{font-size:clamp(20px,1.6vw,24px);margin:0 0 .9em;text-align:start;direction:ltr;unicode-bidi:isolate;display:block;text-align:right}
+.p-body .lead{font-size:clamp(21px,1.7vw,25px);line-height:1.55;color:var(--ink);margin-bottom:1.3em}
+.p-facts{margin:0 0 clamp(30px,3vw,46px);border-top:1px solid rgba(139,105,78,.34)}
+.p-facts > div{display:grid;grid-template-columns:7.5em 1fr;gap:14px;padding:12px 2px;border-bottom:1px solid rgba(139,105,78,.34)}
+.p-facts dt{font-weight:700;color:var(--brown);letter-spacing:.04em}
+.p-facts dd{margin:0}
+.p-body h2{font-size:clamp(23px,1.9vw,29px);font-weight:700;letter-spacing:.04em;margin:1.5em 0 .5em}
+.p-nav{background:var(--paper);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:10px var(--gut) clamp(56px,6vw,96px)}
+.p-nav .more{margin-top:0}
+@media (max-width:900px){
+  .p-page{grid-template-columns:1fr;padding-top:100px}
+  .p-pic{position:static;max-width:340px;margin-inline:auto}
+  .p-nav{justify-content:center}
+}
