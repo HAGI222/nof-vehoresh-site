@@ -920,3 +920,23 @@ body{letter-spacing:0}
 /* invitation card: brown ground around it, like the quotes band (Hagai 25.11) */
 .invite{background:var(--brown);padding-top:clamp(48px,5vw,84px)}
 .invite-card{background:var(--paper);border-color:transparent;box-shadow:0 0 0 1px rgba(255,253,249,.18)}
+
+/* invitation: the card stands on a photo of trees that moves slowly behind it, just before the footer (Hagai 25.11) */
+.invite{position:relative;overflow:hidden;background:var(--brown);padding:clamp(64px,8vw,130px) var(--gut)}
+.invite-bg{position:absolute;inset:0;height:auto;margin:0}
+.invite-bg::after{content:"";position:absolute;inset:0;background:rgba(22,15,9,.2)}
+.invite-card{position:relative;z-index:1;box-shadow:0 26px 60px -30px rgba(15,10,6,.7)}
+@media (max-width:767px){ .invite{padding-block:56px} .invite-bg{height:auto} }
+
+/* phone: the moving rows (gardens, plants, garden cards on the services page) work like the rows on terrarosa.org:
+   swiped with a finger, each card stopping in place, no continuous movement (Hagai 25.11) */
+@media (max-width:767px){
+  .g-run.home,.plants-run,.cards-run{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .g-run.home::-webkit-scrollbar,.plants-run::-webkit-scrollbar,.cards-run::-webkit-scrollbar{display:none}
+  .g-run.home .g-track,.plants-track,.cards-track{animation:none;padding-inline:4vw}
+  .g-run.home .g-card,.plant,.cards-track .card{scroll-snap-align:center}
+  .g-run.home .g-card[aria-hidden="true"],.plant[aria-hidden="true"],.cards-track .card[aria-hidden="true"]{display:none}
+  .g-run.home .g-card{width:58vw}
+  .plant{width:56vw}
+  .cards-track .card{width:62vw}
+}
