@@ -960,3 +960,26 @@ body::before{content:"";position:fixed;top:0;bottom:0;right:0;width:10px;backgro
   .step-art{width:72px;height:64px}
   .steps .num{font-size:18px}
 }
+
+/* plant page: "previous / all / next" as small square black buttons with white text;
+   on a phone the row shows at the top of the page as well as at the bottom (Hagai 25.11) */
+.p-nav .more{padding:6px 12px;border:0;border-radius:0;background:#141414;color:#fff;font-size:13.5px;font-weight:400;letter-spacing:.04em}
+.p-nav .more:hover{background:#3a3a3a;color:#fff}
+.p-nav.top{display:none}
+@media (max-width:767px){
+  .p-nav .more{padding:6px 11px;font-size:13px;border-radius:0}
+  .p-nav.top{display:flex;padding:76px var(--gut) 0}
+  .p-nav.top + .p-page{padding-top:18px}
+}
+
+/* phone: a button for an introduction meeting that stays at the bottom of the screen while scrolling (Hagai 25.11) */
+.stick{display:none}
+@media (max-width:767px){
+  .stick{display:block;position:fixed;inset-inline:14px;bottom:12px;z-index:46;background:var(--olive);color:var(--paper);text-align:center;text-decoration:none;font-family:var(--display);font-weight:700;font-size:16px;letter-spacing:.06em;line-height:1.2;padding:15px 16px;border-radius:999px;box-shadow:0 10px 26px -10px rgba(15,10,6,.65);transform:translateY(160%);transition:transform .35s ease}
+  .stick.on{transform:none}
+  .wa{bottom:78px}
+  .totop{bottom:78px}
+  .menu-open .stick,.pop-open .stick,.lb-open .stick{display:none}
+  .foot{padding-bottom:150px}
+}
+@media (max-width:767px) and (prefers-reduced-motion:reduce){ .stick{transition:none} }

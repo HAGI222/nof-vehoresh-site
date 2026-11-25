@@ -288,4 +288,12 @@
     window.addEventListener('resize', function () { qGo(qNow, false); });
     qPlay();
   }
+
+  // phone: the meeting button slides in at the bottom once the visitor starts scrolling
+  var stick = document.querySelector('.stick');
+  if (stick) {
+    var stickShow = function () { stick.classList.toggle('on', (window.scrollY || 0) > 220); };
+    window.addEventListener('scroll', stickShow, { passive: true });
+    stickShow();
+  }
 })();
