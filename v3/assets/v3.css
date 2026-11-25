@@ -1067,3 +1067,14 @@ a.plant:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
 @media (max-width:767px){
   .pin-name i{display:none}
 }
+
+/* menu button: three small lines instead of two long ones (Hagai chose option 3, "and smaller", 25.11) */
+.burger{width:44px;height:36px}
+.burger span{inset-inline:6px auto;width:17px;border-radius:2px;transition:transform .3s,top .3s,opacity .2s,width .3s}
+.burger span:nth-child(1){top:12px}
+.burger span:nth-child(2){top:17px}
+.burger span:nth-child(3){top:22px}
+.menu-open .burger span{width:20px}
+.menu-open .burger span:nth-child(1){top:17px;transform:rotate(45deg)}
+.menu-open .burger span:nth-child(2){top:17px;transform:none;opacity:0}
+.menu-open .burger span:nth-child(3){top:17px;transform:rotate(-45deg)}
