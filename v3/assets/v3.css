@@ -983,3 +983,6 @@ body::before{content:"";position:fixed;top:0;bottom:0;right:0;width:10px;backgro
   .foot{padding-bottom:150px}
 }
 @media (max-width:767px) and (prefers-reduced-motion:reduce){ .stick{transition:none} }
+
+/* the fixed brown line moves to the left edge of the site (Hagai 25.11) */
+body::before{right:auto;left:0}
