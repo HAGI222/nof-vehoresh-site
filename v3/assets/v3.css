@@ -1162,3 +1162,9 @@ a.plant:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
   .q-card blockquote,.invite-card p,.btn,.btn-line,.btn-line span{font-size:16px}
   .foot,.foot p,.foot li a,.foot p a{font-size:16px}
 }
+
+/* phone: the logo bigger still, as wide as fits beside the menu button; the titles keep the size they had (Hagai 25.11) */
+@media (max-width:767px){
+  :root{--logo-fs:min(7.2vw,30px)}
+  h1,h2{font-size:min(5.46vw,22.7px) !important}
+}
