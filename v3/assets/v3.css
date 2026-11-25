@@ -940,3 +940,23 @@ body{letter-spacing:0}
   .plant{width:56vw}
   .cards-track .card{width:62vw}
 }
+
+/* a fixed brown line down the right edge of the site, as on the reference site (Hagai 25.11) */
+body::before{content:"";position:fixed;top:0;bottom:0;right:0;width:10px;background:var(--brown);z-index:70;pointer-events:none}
+@media (max-width:767px){ body::before{width:6px} }
+
+/* plant page: the photo credits line, and room for more small pictures under the main one */
+.p-credit{margin-top:2.2em;padding-top:14px;border-top:1px solid rgba(139,105,78,.3);font-size:13.5px;line-height:1.7;color:var(--soft)}
+.p-credit a{color:inherit;text-underline-offset:3px}
+
+/* services page: a small drawing beside each of the six steps, the number under it (Hagai 25.11) */
+.steps li{grid-template-columns:128px 1fr;column-gap:8px;align-items:start}
+.step-side{display:flex;flex-direction:column;align-items:center;gap:10px;padding-inline-end:18px}
+.step-art{display:block;width:96px;height:84px;object-fit:contain}
+.steps .num{font-size:22px;letter-spacing:.08em;color:var(--brown)}
+@media (max-width:767px){
+  .steps li{grid-template-columns:92px 1fr}
+  .step-side{padding-inline-end:12px;gap:6px}
+  .step-art{width:72px;height:64px}
+  .steps .num{font-size:18px}
+}
