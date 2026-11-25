@@ -717,3 +717,51 @@ body{font-family:var(--display);font-weight:400}
 .who-name span{opacity:.9}
 .quotes-art{display:block;width:min(340px,70%);height:auto;margin:clamp(18px,2vw,30px) auto 0}
 @media (max-width:767px){ .who-pic{width:80px;height:80px} .quotes-art{width:min(260px,72%)} }
+
+/* client quotes, small corrections (Hagai 25.11): tiny leaves-and-heart, no row of dots, picture beside the name */
+.quotes-art{width:min(132px,36%);margin-top:clamp(20px,2.2vw,32px)}
+.q-dots{display:none}
+.said .who{flex-direction:row;justify-content:center;gap:14px}
+.who-pic{width:66px;height:66px;flex:none}
+.who-name{text-align:start}
+@media (max-width:767px){ .who-pic{width:60px;height:60px} .quotes-art{width:min(112px,34%)} }
+
+/* learning area, all plants: a wall of pictures set close together, name on each, like a pin board (Hagai 25.11) */
+.pins{background:var(--paper);padding:0 var(--gut) clamp(60px,6vw,100px);columns:4;column-gap:10px}
+.pin{position:relative;display:block;margin:0 0 10px;break-inside:avoid;border-radius:var(--round);overflow:hidden;background:#fbf8ee;text-decoration:none}
+.pin img{display:block;width:100%;height:auto;transition:transform .9s ease}
+.pin:hover img{transform:scale(1.04)}
+.pin-name{position:absolute;inset:auto 0 0 0;padding:54px 16px 14px;background:linear-gradient(to top,rgba(22,15,9,.78) 0%,rgba(22,15,9,.5) 48%,rgba(22,15,9,0) 100%);color:#fffdf9;text-align:start}
+.pin-name b{display:block;font-weight:700;font-size:clamp(19px,1.55vw,24px);letter-spacing:.04em;line-height:1.25}
+.pin-name i{display:block;font-family:"Frank Ruhl Libre",Georgia,serif;font-style:italic;font-size:15.5px;opacity:.92;text-align:right}
+.pin:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+@media (max-width:1100px){ .pins{columns:3} }
+@media (max-width:767px){
+  .pins{columns:2;column-gap:8px}
+  .pin{margin-bottom:8px}
+  .pin-name{padding:40px 11px 10px}
+  .pin-name b{font-size:17px}
+  .pin-name i{font-size:13.5px}
+}
+
+/* learning area, one plant: more photos of the plant as a gallery */
+.p-gal{background:var(--paper);text-align:center;padding:clamp(20px,2.4vw,40px) var(--gut) clamp(24px,2.6vw,40px)}
+
+/* client quotes as a moving row of cards (Hagai 25.11) */
+.quotes{padding-inline:0;overflow:hidden}
+.q-run{overflow:hidden}
+.q-track{display:flex;align-items:stretch;width:max-content;animation:plants-run 170s linear infinite}
+.q-run:hover .q-track{animation-play-state:paused}
+.q-card{flex:none;box-sizing:border-box;width:clamp(290px,27vw,400px);margin-inline:9px;background:var(--paper);color:var(--ink);border-radius:var(--round);padding:22px 24px 26px;text-align:start}
+.q-card .who{display:flex;flex-direction:row;align-items:center;justify-content:flex-start;gap:14px;margin-bottom:16px}
+.q-card .who-pic{background:var(--pale);box-shadow:0 0 0 1px rgba(139,105,78,.32)}
+.q-card .who-name{font-size:15.5px;color:var(--soft)}
+.q-card .who-name b{color:var(--brown);font-size:clamp(20px,1.6vw,23px)}
+.q-card .who-name span{opacity:1}
+.q-card blockquote{margin:0;font-size:18px;line-height:1.7}
+@media (max-width:767px){
+  .q-track{animation-duration:120s}
+  .q-card{width:78vw;margin-inline:6px;padding:20px 20px 22px}
+  .q-card blockquote{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){ .q-run{overflow-x:auto} .q-track{animation:none} .q-card[aria-hidden="true"]{display:none} }
