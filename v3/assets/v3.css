@@ -439,3 +439,35 @@ h3,.steps h3,.card h3,.person h3,.facts h3{font-weight:700;letter-spacing:.04em}
   .f-icons a{padding:7px}
   .kicker{font-size:14.5px}
 }
+
+/* home: the team (text and three upright photos), same content as in version 2 */
+.team{background:var(--cream);padding:clamp(56px,6vw,96px) var(--gut) clamp(60px,6.4vw,104px);text-align:center}
+.team-txt{max-width:763px;margin-inline:auto}
+.team-txt h2{margin-bottom:.8em}
+.team-pics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:1180px;margin:clamp(40px,4.6vw,72px) auto 0}
+.team-pics figure{margin:0;aspect-ratio:3/4;overflow:hidden;background:var(--pale)}
+.team-pics img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* home: client quotes on the brown band, one at a time */
+.quotes{background:var(--brown);color:var(--cream);text-align:center;padding:clamp(60px,6vw,96px) var(--gut) clamp(54px,5.4vw,86px)}
+.quotes h2.kicker{font-weight:400;font-size:15px;letter-spacing:.16em;line-height:1.4;color:var(--cream);margin:0 0 clamp(26px,2.6vw,40px)}
+.quotes-list{display:grid;gap:44px;max-width:900px;margin-inline:auto}
+.said{margin:0}
+.said blockquote{margin:0 auto;max-width:44ch;font-size:clamp(20px,1.65vw,25px);line-height:1.75;text-wrap:balance}
+.said figcaption{margin-top:22px;font-family:var(--display);font-size:16.5px;letter-spacing:.06em;opacity:.92}
+.said figcaption b{font-weight:700}
+.quotes-list.rot{gap:0;grid-template-areas:"q"}
+.quotes-list.rot .said{grid-area:q;align-self:center;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
+.quotes-list.rot .said.on{opacity:1;visibility:visible;transition:opacity .8s ease .35s}
+.q-dots{display:flex;justify-content:center;gap:2px;margin-top:clamp(22px,2.4vw,34px)}
+.q-dots button{width:34px;height:34px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.q-dots button::before{content:"";width:9px;height:9px;border-radius:50%;border:1px solid var(--cream);transition:background .2s}
+.q-dots button[aria-current="true"]::before{background:var(--cream)}
+.q-dots button:focus-visible{outline:1px solid var(--cream);outline-offset:-4px}
+@media (max-width:767px){
+  .team-pics{grid-template-columns:1fr 1fr;gap:8px}
+  .team-pics figure:first-child{grid-column:1/-1;aspect-ratio:4/5}
+  .said blockquote{font-size:18.5px;max-width:none}
+  .q-dots button{width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){ .quotes-list.rot .said,.quotes-list.rot .said.on{transition:none} }

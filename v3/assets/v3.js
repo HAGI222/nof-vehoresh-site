@@ -51,4 +51,43 @@
   } else {
     items.forEach(function (el) { el.classList.add('in'); });
   }
+
+  // client quotes: one at a time, changing by itself; dots let the visitor choose
+  var list = document.querySelector('.quotes-list');
+  if (list) {
+    var quotes = list.querySelectorAll('.said');
+    var dots = document.createElement('div');
+    var now = 0, timer = null, held = false;
+    var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    dots.className = 'q-dots';
+    function show(i) {
+      now = (i + quotes.length) % quotes.length;
+      quotes.forEach(function (q, k) {
+        q.classList.toggle('on', k === now);
+        q.setAttribute('aria-hidden', k === now ? 'false' : 'true');
+        dots.children[k].setAttribute('aria-current', k === now ? 'true' : 'false');
+      });
+    }
+    function play() {
+      clearInterval(timer);
+      if (!still && !held) timer = setInterval(function () { show(now + 1); }, 6500);
+    }
+    quotes.forEach(function (q, k) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.setAttribute('aria-label', 'המלצה ' + (k + 1) + ' מתוך ' + quotes.length);
+      b.addEventListener('click', function () { show(k); play(); });
+      dots.appendChild(b);
+    });
+    list.classList.add('rot');
+    list.parentNode.appendChild(dots);
+    show(0);
+    ['mouseenter', 'focusin'].forEach(function (ev) {
+      list.parentNode.addEventListener(ev, function () { held = true; clearInterval(timer); });
+    });
+    ['mouseleave', 'focusout'].forEach(function (ev) {
+      list.parentNode.addEventListener(ev, function () { held = false; play(); });
+    });
+    play();
+  }
 })();
