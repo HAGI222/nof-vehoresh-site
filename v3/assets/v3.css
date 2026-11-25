@@ -586,3 +586,6 @@ body{font-family:var(--display);font-weight:400}
   .faq .a{padding-inline-end:8px}
 }
 @media (prefers-reduced-motion:reduce){ .faq summary::after{transition:none} }
+
+/* button text in bold; the button colour stays the olive green (Hagai 25.11, after seeing six colour options) */
+.btn,.btn-line,.cta,.menu a.cta{font-weight:700}
