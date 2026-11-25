@@ -908,3 +908,11 @@ body{letter-spacing:0}
   .plants-head h2{flex:1 1 auto;min-width:0;font-size:clamp(20px,5.9vw,26px);line-height:1.2}
   .plants-head .btn{flex:none;padding:10px 16px;font-size:14px;letter-spacing:.04em;white-space:nowrap}
 }
+
+/* the invitation, made to stand out (option 2 Hagai chose, 25.11): a framed card on the sand background, with the leaves-and-heart drawing */
+.invite{background:var(--paper);padding:clamp(40px,4.4vw,72px) var(--gut) clamp(56px,5.6vw,92px)}
+.invite-card{max-width:860px;margin-inline:auto;background:var(--pale);border:1.5px solid var(--brown);border-radius:calc(var(--round) + 8px);padding:clamp(28px,3.4vw,50px) clamp(20px,4vw,64px) clamp(34px,4vw,58px);text-align:center}
+.invite-art{display:block;width:min(180px,46%);height:auto;margin:0 auto clamp(12px,1.4vw,20px)}
+.invite h2{font-size:clamp(27px,2.7vw,40px);margin-bottom:.45em}
+.invite p{font-size:clamp(17px,1.25vw,19px);margin:0 auto 6px;max-width:52ch}
+.invite .btn{margin-top:20px}
