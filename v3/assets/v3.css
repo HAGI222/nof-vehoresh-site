@@ -1119,3 +1119,23 @@ a.plant:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
 .split h2.with-sub{margin-bottom:.3em}
 .split .sub-h{font-family:inherit;font-weight:500;font-size:clamp(19px,1.7vw,25px);line-height:1.38;color:var(--brown);margin:0 0 1em}
 .split.brown .sub-h{color:inherit;opacity:.94}
+
+/* phone menu: the panel a little wider, so the dark part beside it is narrower (Hagai 25.11) */
+.menu{width:min(76vw,380px)}
+
+/* phone: the swiped rows (gardens, plants, garden cards) also move by themselves, one card at a time, in an endless loop,
+   like the events row on the terrarosa.org home page. The second copy of the cards is shown so the loop has no end. */
+@media (max-width:767px){
+  .m-loop .m-twin{display:block !important}
+  .m-loop .g-track,.m-loop .plants-track,.m-loop .cards-track,.m-loop.g-run .g-track{padding-inline:0}
+}
+
+/* questions and answers on a phone: gentler and tighter: a smaller title, lighter and smaller questions,
+   less space between the rows and a small plus sign (Hagai 25.11) */
+@media (max-width:767px){
+  .faq{padding-block:44px 50px}
+  .faq h2{font-size:23px;margin-bottom:20px}
+  .faq summary{padding:13px 2px;gap:12px;font-size:16.5px;font-weight:500;letter-spacing:.01em;line-height:1.4}
+  .faq summary::after{width:24px;height:24px;border-width:1px;background-size:9px 1px,1px 9px}
+  .faq .a{padding-bottom:15px;font-size:15.5px;line-height:1.65}
+}

@@ -357,4 +357,52 @@
       showDrift();
     }
   }
+
+  // phone: the swiped rows move by themselves, one card at a time, in an endless loop (a finger on the row holds it)
+  if (phone && phone.matches) {
+    var rowStill = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    [['.g-run.home', '.g-card'], ['.plants-run', '.plant'], ['.cards-run', '.card']].forEach(function (pair) {
+      var run = document.querySelector(pair[0]);
+      if (!run) return;
+      var all = Array.prototype.slice.call(run.querySelectorAll(pair[1]));
+      var n = all.filter(function (c) { return c.getAttribute('aria-hidden') !== 'true'; }).length;
+      if (n < 2 || all.length < 2 * n) return;
+      var cards = all.slice(0, 2 * n);
+      cards.slice(n).forEach(function (c) { c.classList.add('m-twin'); });
+      run.classList.add('m-loop');
+      var now = n, timer = null, held = false, seen = false, wait = null;
+      function nearest() {
+        var r = run.getBoundingClientRect(), mid = r.left + r.width / 2, best = 0, gap = 1e9;
+        cards.forEach(function (c, k) {
+          var cr = c.getBoundingClientRect(), d = Math.abs(cr.left + cr.width / 2 - mid);
+          if (d < gap) { gap = d; best = k; }
+        });
+        return best;
+      }
+      function go(i, smooth) {
+        now = Math.max(0, Math.min(cards.length - 1, i));
+        var r = run.getBoundingClientRect(), cr = cards[now].getBoundingClientRect();
+        run.scrollBy({ left: (cr.left + cr.width / 2) - (r.left + r.width / 2), behavior: smooth === false || rowStill ? 'auto' : 'smooth' });
+      }
+      function jump(i) { run.style.scrollSnapType = 'none'; go(i, false); run.style.scrollSnapType = ''; }
+      function home() {                       // once the movement has settled, step silently back so there is always a card on each side
+        now = nearest();
+        if (now >= 2 * n - 1) jump(now - n);
+        else if (now <= 0) jump(now + n);
+      }
+      function play() {
+        clearInterval(timer);
+        if (!rowStill && !held && seen) timer = setInterval(function () { go(now + 1); }, 3200);
+      }
+      run.addEventListener('scroll', function () { clearTimeout(wait); wait = setTimeout(home, 160); }, { passive: true });
+      run.addEventListener('touchstart', function () { held = true; clearInterval(timer); }, { passive: true });
+      run.addEventListener('touchend', function () { held = false; play(); }, { passive: true });
+      if ('IntersectionObserver' in window) {
+        new IntersectionObserver(function (en) { seen = en[0].isIntersecting; play(); }, { threshold: 0.3 }).observe(run);
+      } else { seen = true; }
+      jump(now);
+      window.addEventListener('load', function () { jump(now); });
+      play();
+    });
+  }
 })();
