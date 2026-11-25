@@ -1139,3 +1139,26 @@ a.plant:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
   .faq summary::after{width:24px;height:24px;border-width:1px;background-size:9px 1px,1px 9px}
   .faq .a{padding-bottom:15px;font-size:15.5px;line-height:1.65}
 }
+
+/* phone: the logo bigger and in the middle of the top bar; and no title on the page is bigger than the logo (Hagai 25.11).
+   Rubik looks larger than the logo's font at the same size, so the titles sit a little under the logo's size. */
+@media (max-width:767px){
+  :root{--logo-fs:min(6.5vw,27px)}
+  .hdr .logo{position:absolute;top:50%;left:calc(50% + 5px);transform:translate(-50%,-50%);margin:0;font-size:var(--logo-fs);white-space:nowrap}
+  .menu-open .hdr .logo{position:static;transform:none}
+  h1,h2{font-size:calc(var(--logo-fs) * .92) !important;line-height:1.3}
+}
+
+/* phone type scale, one step down (Hagai 25.11): titles a little under the logo, sub-titles to match, body text a little smaller */
+@media (max-width:767px){
+  body{font-size:16.5px}
+  h1,h2{font-size:calc(var(--logo-fs) * .84) !important}
+  h3{font-size:17.5px !important}
+  .pin-name b{font-size:17.5px}
+  .split .sub-h,.p-body .lead{font-size:17px}
+}
+@media (max-width:767px){
+  .plant figcaption b,.q-card .who-name b,.who-name b{font-size:17.5px}
+  .q-card blockquote,.invite-card p,.btn,.btn-line,.btn-line span{font-size:16px}
+  .foot,.foot p,.foot li a,.foot p a{font-size:16px}
+}
