@@ -1168,3 +1168,14 @@ a.plant:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
   :root{--logo-fs:min(7.2vw,30px)}
   h1,h2{font-size:min(5.46vw,22.7px) !important}
 }
+
+/* phone top bar: three equal gaps: screen edge to menu button, button to logo, logo to the brown line (Hagai 25.11).
+   The button is as wide as its lines so the gaps are measured from what is seen; the tap area stays large. */
+@media (max-width:767px){
+  .hdr{justify-content:space-evenly;gap:0;padding-inline:0 10px}
+  .hdr .logo{position:static;transform:none}
+  .burger{width:17px;margin:0}
+  .burger span{inset-inline:0 auto}
+  .burger::before{content:"";position:absolute;inset:-8px -14px}
+  .menu-open .hdr{justify-content:flex-start;gap:16px;padding-inline:22px 10px}
+}
