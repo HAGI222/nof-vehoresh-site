@@ -9,7 +9,7 @@ Shrunk for the site; otherwise unchanged. The credit line on each plant page is 
 | origanum-syriacum.jpg | NasserHalaweh | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Lamiaceae_Origanum_syriacum_1_2.jpg |
 | myrtus-communis.jpg | לא ידוע | Public domain | https://commons.wikimedia.org/wiki/File:Illustration_Myrtus_communis0.jpg |
 | thymbra-capitata.jpg | Ferdinand Bauer | Public domain | https://commons.wikimedia.org/wiki/File:Bodleian-Library-MS-Sherard-244_00121_f-115-Satureja-capitata.jpg |
-| quercus-calliprinos.jpg | Roger Culos | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Quercus_coccifera_MHNT.BOT.2008.1.15.jpg |
+| quercus-calliprinos.jpg | Awinch1001 | CC0 | https://commons.wikimedia.org/wiki/File:Quercus_coccifera_spp_calliprinos_UC_Davis_Arboretum.jpg |
 | quercus-ithaburensis.jpg | Krzysztof Ziarnek, Kenraiz | CC BY 4.0 | https://commons.wikimedia.org/wiki/File:Quercus_ithaburensis_kz01.jpg |
 | cercis-siliquastrum.jpg | William Robinson | Public domain | https://commons.wikimedia.org/wiki/File:Cercis_siliquastrum_L.jpg |
 | styrax-officinalis.jpg | Internet Archive Book Images | No restrictions | https://commons.wikimedia.org/wiki/File:Elements_of_the_science_of_botany,_as_established_by_Linnaeus;_with_examples_to_illustrate_the_classes_and_orders_of_his_system_(1812)_(21078109899).jpg |
@@ -60,7 +60,7 @@ Shrunk for the site; otherwise unchanged. The credit line on each plant page is 
 | thymbra-capitata-2.webp | Denis Barthel | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Thymbra_capitata_Ghajn_Tuffieha_Malta_02.jpg |
 | thymbra-capitata-3.webp | Tranceliner | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Thymbra_capitata,_ta%27_Lippia,_(2026).jpg |
 | quercus-calliprinos-1.webp | Gideon Pisanty (Gidip) גדעון פיזנטי | CC BY 3.0 | https://commons.wikimedia.org/wiki/File:Quercus_calliprinos_tree_1.JPG |
-| quercus-calliprinos-2.webp | Awinch1001 | CC0 | https://commons.wikimedia.org/wiki/File:Quercus_coccifera_spp_calliprinos_UC_Davis_Arboretum.jpg |
+| quercus-calliprinos-2.webp | Roger Culos | CC BY-SA 3.0 | https://commons.wikimedia.org/wiki/File:Quercus_coccifera_MHNT.BOT.2008.1.15.jpg |
 | quercus-calliprinos-3.webp | Davidbena | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:Palestine_oak_(Quercus_calliprinos).jpg |
 | quercus-ithaburensis-1.webp | SigTif | CC BY-SA 4.0 | https://commons.wikimedia.org/wiki/File:%D7%90%D7%9C%D7%95%D7%9F_%D7%94%D7%AA%D7%91%D7%95%D7%A8_%D7%91%D7%A9%D7%9E%D7%95%D7%A8%D7%AA_%D7%98%D7%91%D7%A2_%D7%90%D7%9C%D7%95%D7%A0%D7%99_%D7%A7%D7%93%D7%99%D7%9E%D7%94.jpg |
 | quercus-ithaburensis-2.webp | עוזי פז | CC BY 2.5 | https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_80728_mt_tabor_oak_the_tree_of_golani.jpg |

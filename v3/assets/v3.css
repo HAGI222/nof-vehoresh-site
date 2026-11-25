@@ -1062,3 +1062,8 @@ a.plant:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
   .pin-line{display:block;margin-top:7px;font-size:14.5px;line-height:1.5;color:var(--ink);opacity:.86}
   .pin-go{display:inline-block;margin-top:11px;padding:7px 17px;border-radius:999px;background:var(--olive);color:#fffdf9;font-weight:700;font-size:13.5px;letter-spacing:.02em}
 }
+
+/* phone list of plants: without the scientific name under the Hebrew one (Hagai 25.11) */
+@media (max-width:767px){
+  .pin-name i{display:none}
+}
