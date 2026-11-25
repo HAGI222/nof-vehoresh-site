@@ -227,4 +227,65 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && lb && lb.classList.contains('on')) lbClose();
   });
+
+  // client quotes carousel: three cards in view from the start, one step at a time, by itself, in an endless loop
+  var qRun = document.querySelector('.q-run');
+  if (qRun) {
+    var qCards = qRun.querySelectorAll('.q-card');
+    var qSet = qCards.length / 3;                 // the cards are printed three times; the middle set is the home set
+    var qNow = qSet + 1, qTimer = null, qHeld = false, qSeen = false, qWait = null;
+    var qStill = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function qMark() {
+      qCards.forEach(function (c, k) { c.classList.toggle('on', k === qNow); });
+    }
+    function qNearest() {
+      var r = qRun.getBoundingClientRect(), mid = r.left + r.width / 2, best = 0, gap = 1e9;
+      qCards.forEach(function (c, k) {
+        var cr = c.getBoundingClientRect(), d = Math.abs(cr.left + cr.width / 2 - mid);
+        if (d < gap) { gap = d; best = k; }
+      });
+      return best;
+    }
+    function qGo(i, smooth) {
+      qNow = Math.max(0, Math.min(qCards.length - 1, i));
+      var r = qRun.getBoundingClientRect(), cr = qCards[qNow].getBoundingClientRect();
+      qRun.scrollBy({ left: (cr.left + cr.width / 2) - (r.left + r.width / 2), behavior: smooth === false || qStill ? 'auto' : 'smooth' });
+      qMark();
+    }
+    function qHome() {                            // once the movement has settled, jump silently back into the middle set
+      qNow = qNearest();
+      if (qNow >= 2 * qSet) { qRun.style.scrollSnapType = 'none'; qGo(qNow - qSet, false); qRun.style.scrollSnapType = ''; }
+      else if (qNow < qSet) { qRun.style.scrollSnapType = 'none'; qGo(qNow + qSet, false); qRun.style.scrollSnapType = ''; }
+      else qMark();
+    }
+    function qPlay() {
+      clearInterval(qTimer);
+      if (!qStill && !qHeld && qSeen) qTimer = setInterval(function () { qGo(qNow + 1); }, 4500);
+    }
+    qRun.addEventListener('scroll', function () {
+      clearTimeout(qWait);
+      qWait = setTimeout(qHome, 160);
+    }, { passive: true });
+    var qPrev = document.querySelector('.q-arrow.prev'), qNext = document.querySelector('.q-arrow.next');
+    if (qPrev) qPrev.addEventListener('click', function () { qGo(qNow - 1); qPlay(); });
+    if (qNext) qNext.addEventListener('click', function () { qGo(qNow + 1); qPlay(); });
+    qRun.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft') { qGo(qNow + 1); qPlay(); }
+      else if (e.key === 'ArrowRight') { qGo(qNow - 1); qPlay(); }
+    });
+    // a finger on the row or keyboard focus holds it; the mouse does not, so it keeps moving by itself
+    ['focusin', 'touchstart'].forEach(function (ev) {
+      qRun.addEventListener(ev, function () { qHeld = true; clearInterval(qTimer); }, { passive: true });
+    });
+    ['focusout', 'touchend'].forEach(function (ev) {
+      qRun.addEventListener(ev, function () { qHeld = false; qPlay(); }, { passive: true });
+    });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (en) { qSeen = en[0].isIntersecting; qPlay(); }, { threshold: 0.3 }).observe(qRun);
+    } else { qSeen = true; }
+    qGo(qNow, false);
+    window.addEventListener('load', function () { qGo(qNow, false); });
+    window.addEventListener('resize', function () { qGo(qNow, false); });
+    qPlay();
+  }
 })();

@@ -816,3 +816,73 @@ body{font-family:var(--display);font-weight:400}
   .logo{font-size:clamp(17px,5.7vw,23px);gap:.36em}
   .logo i,.logo span{display:inline}
 }
+
+/* plant page: "previous / all / next" as one minimal row of thin dark buttons (Hagai 25.11) */
+.p-nav{display:flex;flex-wrap:nowrap;justify-content:space-between;align-items:center;gap:8px;grid-template-columns:none}
+.p-nav .more{margin:0;padding:8px 16px;border:1px solid rgba(15,38,15,.5);border-radius:999px;background:none;color:var(--ink);font-weight:400;font-size:15px;letter-spacing:.03em;line-height:1.3;text-align:center;white-space:nowrap}
+.p-nav .more:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.p-nav .more small{display:inline;margin:0;font-size:1em;font-weight:400;letter-spacing:inherit;opacity:1}
+.p-nav .more small::after{content:":"}
+.p-nav .prev::before{content:"→";margin-inline-end:.45em}
+.p-nav .next::after{content:"←";margin-inline-start:.45em}
+.p-nav .all{grid-column:auto;grid-row:auto}
+@media (max-width:767px){
+  .p-nav{display:flex;grid-template-columns:none;padding-top:6px}
+  .p-nav .more{padding:7px 13px;font-size:14.5px;border-radius:999px}
+  .p-nav .more small{display:inline;font-size:1em;margin:0}
+  .p-nav .more small::after{content:none}
+  .p-nav .nm{display:none}
+}
+
+/* client quotes, final form: a carousel that stops on one card at a time, soft fade at both sides (Hagai 25.11) */
+.quotes{--qw:clamp(320px,34vw,470px)}
+.q-wrap{position:relative}
+.q-run{overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 11%,#000 89%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 11%,#000 89%,transparent 100%)}
+.q-run::-webkit-scrollbar{display:none}
+.q-run:focus-visible{outline:1px solid var(--cream);outline-offset:-2px}
+.q-track{animation:none;gap:16px;padding:6px calc(50% - var(--qw) / 2)}
+.q-run:hover .q-track{animation-play-state:running}
+.q-card{width:var(--qw);margin-inline:0;scroll-snap-align:center;opacity:.5;transform:scale(.955);transition:opacity .45s ease,transform .45s ease}
+.q-card.on{opacity:1;transform:none}
+.who-pic svg{display:block;width:100%;height:100%}
+.q-arrow{position:absolute;top:50%;z-index:2;width:46px;height:46px;margin-top:-23px;padding:0;border:1px solid rgba(255,253,249,.7);border-radius:50%;background:rgba(122,91,67,.85);color:#fffdf9;cursor:pointer;display:grid;place-items:center;transition:background-color .2s}
+.q-arrow:hover{background:var(--olive)}
+.q-arrow svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.q-arrow.prev{right:clamp(12px,3vw,48px)}
+.q-arrow.next{left:clamp(12px,3vw,48px)}
+.q-arrow:focus-visible{outline:2px solid var(--cream);outline-offset:2px}
+@media (max-width:767px){
+  .quotes{--qw:76vw}
+  .q-track{gap:10px}
+  .q-card{width:var(--qw);margin-inline:0}
+  .q-arrow{display:none}
+  .q-run{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 7%,#000 93%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 7%,#000 93%,transparent 100%)}
+}
+@media (prefers-reduced-motion:reduce){ .q-card{transition:none} .q-track{animation:none} }
+
+/* home: the moving row of gardens inside the "gardens we built" block, then the button (Hagai 25.11) */
+.g-run.home{padding-bottom:0}
+.g-after{background:var(--paper);text-align:center;padding:clamp(8px,1vw,16px) var(--gut) clamp(56px,5.6vw,88px)}
+.sec.center:has(+ .g-run.home){padding-bottom:clamp(30px,3.2vw,46px)}
+
+/* no hairline between neighbouring light sections: the page behind them is the same sand colour (Hagai 25.11) */
+html,body{background:var(--paper)}
+
+/* home: "gardens we built" heading with its button beside it, the line of text under it, then the moving row (Hagai 25.11) */
+.sec.g-intro{padding-inline:0;padding-bottom:clamp(26px,3vw,44px)}
+.g-intro .plants-head{margin-bottom:14px}
+.g-lead{margin:0;padding-inline:var(--gut);max-width:calc(60ch + 2 * var(--gut))}
+.g-run.home{padding-bottom:clamp(56px,5.6vw,88px)}
+
+/* the logo also at the top of the footer (Hagai 25.11) */
+.foot .f-logo{display:inline-flex;color:var(--brown);font-size:clamp(24px,2.05vw,31px);margin-bottom:22px;padding-block:0}
+.foot .f-logo i,.foot .f-logo span{display:inline}
+@media (max-width:767px){ .foot .f-logo{font-size:clamp(21px,6.2vw,26px)} }
+
+/* typeface: Rubik for headings and running text, the closest free match to the sample Hagai sent (25.11).
+   The logo keeps Carmela. To go back to Carmela everywhere, remove this block. */
+:root{--display:"Rubik","Carmela","Arial Hebrew",Arial,sans-serif}
+.logo{font-family:"Carmela","Frank Ruhl Libre","Arial Hebrew",Arial,sans-serif}
+h1,h2{letter-spacing:.02em}
+h3,.steps h3,.card h3,.person h3,.facts h3{letter-spacing:.01em}
+body{letter-spacing:0}
