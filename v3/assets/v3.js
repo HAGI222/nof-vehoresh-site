@@ -31,6 +31,9 @@
     menu.addEventListener('click', function (e) {
       if (e.target.closest('a')) setMenu(false);
     });
+    // the menu covers only part of the screen: a tap on the dark part beside it closes it
+    var veil = document.querySelector('.menu-veil');
+    if (veil) veil.addEventListener('click', function () { setMenu(false); });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') setMenu(false);
     });
