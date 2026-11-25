@@ -471,3 +471,75 @@ h3,.steps h3,.card h3,.person h3,.facts h3{font-weight:700;letter-spacing:.04em}
   .q-dots button{width:40px;height:40px}
 }
 @media (prefers-reduced-motion:reduce){ .quotes-list.rot .said,.quotes-list.rot .said.on{transition:none} }
+
+/* pop-up that invites to an introduction meeting: brown box, cream text, close mark (after the reference Hagai sent) */
+.pop{position:fixed;inset:0;z-index:120;display:grid;place-items:center;padding:20px;background:rgba(20,15,10,.6);opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
+.pop.on{opacity:1;visibility:visible;transition:opacity .35s ease}
+.pop-box{position:relative;box-sizing:border-box;width:min(100%,760px);max-height:calc(100dvh - 40px);overflow:auto;background:var(--brown);color:var(--cream);padding:clamp(52px,5.4vw,76px) clamp(26px,5.4vw,72px) clamp(34px,4.2vw,56px);box-shadow:0 30px 70px -30px rgba(20,14,9,.7);transform:translateY(14px);transition:transform .45s ease}
+.pop.on .pop-box{transform:none}
+.pop h2{color:var(--cream);font-size:clamp(28px,2.7vw,40px);margin:0 0 .65em;padding-inline-end:36px}
+.pop p{margin:0;max-width:46ch;font-size:clamp(17px,1.3vw,19.5px);line-height:1.75}
+.pop-actions{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:clamp(26px,2.8vw,38px);padding-top:clamp(24px,2.6vw,34px);border-top:1px solid rgba(255,253,249,.4)}
+.pop .btn{margin-top:0;background:var(--cream);color:var(--brown-deep)}
+.pop .btn:hover{background:#fff}
+.pop .btn-line{color:var(--cream);padding:15px 24px;font-size:17px;letter-spacing:.1em}
+.pop .btn-line:hover{background:var(--cream);color:var(--brown-deep);border-color:var(--cream)}
+.pop-x{position:absolute;top:14px;inset-inline-end:14px;width:46px;height:46px;padding:0;border:0;background:none;color:var(--cream);cursor:pointer;display:grid;place-items:center;opacity:.9}
+.pop-x:hover{opacity:1}
+.pop-x svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round}
+.pop-x:focus-visible,.pop a:focus-visible{outline:1px solid var(--cream);outline-offset:3px}
+.pop-open{overflow:hidden}
+.pop-open .wa,.pop-open .totop{display:none}
+@media (max-width:767px){
+  .pop{padding:14px}
+  .pop-box{max-height:calc(100dvh - 28px)}
+  .pop-actions{flex-direction:column;align-items:stretch}
+  .pop .btn,.pop .btn-line{text-align:center}
+}
+@media (prefers-reduced-motion:reduce){ .pop,.pop.on,.pop-box{transition:none} .pop-box{transform:none} }
+
+/* slimmer top bar, and the contact button sized to match (Hagai 25.11) */
+.hdr{min-height:66px;padding-block:8px}
+.cta{font-size:15.5px;padding:6px 14px}
+.nav{font-size:16px}
+@media (max-width:767px){
+  .hdr{min-height:60px;padding-block:8px}
+  .burger{height:33px}
+  .burger span:nth-child(1){top:11px}
+  .burger span:nth-child(2){top:21px}
+  .menu-open .burger span:nth-child(1),.menu-open .burger span:nth-child(2){top:16px}
+}
+.logo{font-size:clamp(24px,2.05vw,31px)}
+@media (max-width:1100px) and (min-width:768px){ .logo{font-size:clamp(21px,2.6vw,27px)} }
+@media (max-width:767px){
+  .logo{font-size:clamp(21px,5vw,27px)}
+  .contact{padding-top:68px}
+}
+@media (max-width:480px){ .logo{font-size:clamp(27px,8vw,33px)} }
+
+/* sand background instead of the near-white one, in every light section (Hagai 25.11, the colour he sent: #f1edd6) */
+:root{--paper:#f1edd6;--pale:#f8f5e8}
+.menu,.sec,.strip,.split,.works,.mosaic,.quote,.bleed,.process,.cards-sec,.people,.facts,.logos,.contact,.team{background:var(--paper)}
+.sec.brown,.split.brown{background:var(--brown)}
+.sec.pale{background:var(--pale)}
+.hdr.solid,.plain .hdr{background:rgba(241,237,214,.86)}
+.menu-open .hdr{background:var(--paper)}
+.totop{background:rgba(241,237,214,.9)}
+.team-pics figure{background:#e6e0c6}
+.pop .btn{background:var(--paper)}
+.pop .btn:hover{background:var(--cream)}
+
+/* running text in the heading typeface (Carmela), regular weight (Hagai 25.11) */
+body{font-family:var(--display);font-weight:400}
+
+/* planting strips between sections: the photo moves slower than the page (Hagai 25.11) */
+.drift{position:relative;margin:0;height:clamp(230px,33vw,480px);overflow:hidden;background:var(--brown)}
+.drift img{position:absolute;inset-inline:0;top:0;width:100%;height:100%;object-fit:cover}
+.drift.live img{top:-20%;height:140%;will-change:transform}
+@media (max-width:767px){ .drift{height:62vw} }
+
+/* darker, taller gradient behind the top bar while it sits on the photo, so the menu reads clearly (Hagai 25.11) */
+.hdr::before{bottom:-90px;background:linear-gradient(to bottom,rgba(0,0,0,.66) 0%,rgba(0,0,0,.4) 42%,rgba(0,0,0,.14) 74%,rgba(0,0,0,0) 100%)}
+.hdr .logo,.hdr .nav,.hdr > .cta{text-shadow:0 1px 10px rgba(0,0,0,.35)}
+.hdr.solid .logo,.hdr.solid .nav,.hdr.solid > .cta,.plain .hdr .logo,.plain .hdr .nav,.plain .hdr > .cta,.menu-open .hdr .logo{text-shadow:none}
+@media (max-width:767px){ .hdr::before{bottom:-70px} }

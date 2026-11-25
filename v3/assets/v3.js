@@ -90,4 +90,83 @@
     });
     play();
   }
+
+  // pop-up inviting to an introduction meeting: once per visit, after the visitor has read part of the page
+  var pop = document.getElementById('pop');
+  if (pop) {
+    var KEY = 'nv-pop-seen';
+    var back = null, popTimer = null;
+    var closeBtn = pop.querySelector('.pop-x');
+    function wasSeen() { try { return sessionStorage.getItem(KEY) === '1'; } catch (e) { return false; } }
+    function markSeen() { try { sessionStorage.setItem(KEY, '1'); } catch (e) {} }
+    function isOpen() { return pop.classList.contains('on'); }
+    function openPop(force) {
+      if (isOpen() || doc.classList.contains('menu-open')) return;
+      if (!force && wasSeen()) return;
+      back = document.activeElement;
+      pop.classList.add('on');
+      pop.setAttribute('aria-hidden', 'false');
+      doc.classList.add('pop-open');
+      markSeen();
+      stopWaiting();
+      if (closeBtn) closeBtn.focus();
+    }
+    function closePop() {
+      if (!isOpen()) return;
+      pop.classList.remove('on');
+      pop.setAttribute('aria-hidden', 'true');
+      doc.classList.remove('pop-open');
+      if (back && back.focus) back.focus();
+    }
+    function onRead() {
+      var room = document.documentElement.scrollHeight - window.innerHeight;
+      if (room > 0 && (window.scrollY || 0) > room * 0.4) openPop(false);
+    }
+    function stopWaiting() {
+      clearTimeout(popTimer);
+      window.removeEventListener('scroll', onRead);
+    }
+    if (closeBtn) closeBtn.addEventListener('click', closePop);
+    pop.addEventListener('click', function (e) {
+      if (e.target === pop || e.target.closest('a')) closePop();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (!isOpen()) return;
+      if (e.key === 'Escape') { closePop(); return; }
+      if (e.key !== 'Tab') return;
+      var stops = pop.querySelectorAll('button, a[href]');
+      var first = stops[0], last = stops[stops.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    });
+    if (location.hash === '#popup') {
+      openPop(true);                       // a link ending in #popup always shows it (for review)
+    } else if (!wasSeen()) {
+      window.addEventListener('scroll', onRead, { passive: true });
+      popTimer = setTimeout(function () { openPop(false); }, 30000);
+    }
+  }
+
+  // planting strips: the photo moves slower than the page while scrolling
+  var strips = document.querySelectorAll('.drift');
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (strips.length && !calm) {
+    var waiting = false;
+    function drift() {
+      waiting = false;
+      var vh = window.innerHeight;
+      strips.forEach(function (el) {
+        var r = el.getBoundingClientRect();
+        if (r.bottom < -80 || r.top > vh + 80) return;
+        var t = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);   // 1 entering from below, -1 leaving at the top
+        if (t > 1) t = 1; else if (t < -1) t = -1;
+        el.firstElementChild.style.transform = 'translate3d(0,' + (-t * r.height * 0.2).toFixed(1) + 'px,0)';
+      });
+    }
+    function ask() { if (!waiting) { waiting = true; requestAnimationFrame(drift); } }
+    strips.forEach(function (el) { el.classList.add('live'); });
+    window.addEventListener('scroll', ask, { passive: true });
+    window.addEventListener('resize', ask);
+    drift();
+  }
 })();
