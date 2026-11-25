@@ -986,3 +986,7 @@ body::before{content:"";position:fixed;top:0;bottom:0;right:0;width:10px;backgro
 
 /* the fixed brown line moves to the left edge of the site (Hagai 25.11) */
 body::before{right:auto;left:0}
+
+/* clients row: the Bat Shlomo logo is tall (a silhouette above the name), so it gets more height than the wide ones */
+.logos img[src*="bat-shlomo"]{height:92px}
+@media (max-width:767px){ .logos img[src*="bat-shlomo"]{height:74px} }
