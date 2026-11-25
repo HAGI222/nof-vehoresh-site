@@ -174,4 +174,57 @@
     window.addEventListener('resize', ask);
     drift();
   }
+
+  // plant page: small pictures under the main one; a click shows that picture large
+  var tbox = document.querySelector('.p-thumbs');
+  var big = document.getElementById('p-main');
+  if (tbox && big) {
+    tbox.addEventListener('click', function (e) {
+      var a = e.target.closest('a');
+      if (!a) return;
+      e.preventDefault();
+      big.removeAttribute('width');
+      big.removeAttribute('height');
+      big.src = a.getAttribute('href');
+      big.alt = a.getAttribute('data-alt') || '';
+      tbox.querySelectorAll('a').forEach(function (x) { x.classList.toggle('on', x === a); });
+    });
+  }
+
+  // a click on a garden photo shows it large over the page
+  var lb = null, lbImg = null, lbBack = null;
+  function lbOpen(src, alt) {
+    if (!lb) {
+      lb = document.createElement('div');
+      lb.className = 'lb';
+      lb.setAttribute('role', 'dialog');
+      lb.setAttribute('aria-modal', 'true');
+      lb.setAttribute('aria-label', 'תמונה מוגדלת');
+      lb.innerHTML = '<button class="lb-x" type="button" aria-label="סגירה"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button><img alt="">';
+      lbImg = lb.querySelector('img');
+      lb.addEventListener('click', function (e) { if (e.target !== lbImg) lbClose(); });
+      document.body.appendChild(lb);
+    }
+    lbBack = document.activeElement;
+    lbImg.src = src;
+    lbImg.alt = alt || '';
+    lb.classList.add('on');
+    doc.classList.add('lb-open');
+    lb.querySelector('.lb-x').focus();
+  }
+  function lbClose() {
+    if (!lb) return;
+    lb.classList.remove('on');
+    doc.classList.remove('lb-open');
+    if (lbBack && lbBack.focus) lbBack.focus();
+  }
+  document.addEventListener('click', function (e) {
+    var z = e.target.closest('[data-zoom]');
+    if (z) { e.preventDefault(); lbOpen(z.getAttribute('href'), z.getAttribute('data-alt')); return; }
+    var im = e.target.closest('.shots img');
+    if (im) lbOpen(im.currentSrc || im.src, im.alt);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && lb && lb.classList.contains('on')) lbClose();
+  });
 })();
