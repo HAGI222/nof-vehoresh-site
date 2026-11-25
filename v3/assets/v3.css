@@ -916,3 +916,7 @@ body{letter-spacing:0}
 .invite h2{font-size:clamp(27px,2.7vw,40px);margin-bottom:.45em}
 .invite p{font-size:clamp(17px,1.25vw,19px);margin:0 auto 6px;max-width:52ch}
 .invite .btn{margin-top:20px}
+
+/* invitation card: brown ground around it, like the quotes band (Hagai 25.11) */
+.invite{background:var(--brown);padding-top:clamp(48px,5vw,84px)}
+.invite-card{background:var(--paper);border-color:transparent;box-shadow:0 0 0 1px rgba(255,253,249,.18)}
