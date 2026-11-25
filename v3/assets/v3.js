@@ -296,4 +296,62 @@
     window.addEventListener('scroll', stickShow, { passive: true });
     stickShow();
   }
+
+  // phone: stacked photos become one photo that changes by itself and drifts a little while scrolling.
+  // Covers the row of three photos on the home page, and any two photos that land right under each other
+  // (a photo that ends one text block followed by the photo that opens the next).
+  var phone = window.matchMedia && window.matchMedia('(max-width: 767px)');
+  if (phone && phone.matches) {
+    var quiet = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var shows = [];
+    document.querySelectorAll('.strip, .team-pics').forEach(function (s) {
+      var figs = s.querySelectorAll('figure');
+      if (figs.length > 1) shows.push({ box: s, items: figs, at: 0 });
+    });
+    var pics = Array.prototype.slice.call(document.querySelectorAll('.split > .pic'));
+    for (var pi = 0; pi < pics.length - 1; pi++) {
+      var a = pics[pi], b = pics[pi + 1];
+      if (a.parentNode === b.parentNode) continue;
+      var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
+      if (rb.top > ra.top && rb.top - ra.bottom < 90) {
+        var extra = b.querySelector('img').cloneNode(false);
+        extra.loading = 'eager';
+        extra.removeAttribute('fetchpriority');
+        a.appendChild(extra);
+        a.classList.add('mslide');
+        b.classList.add('m-gone');
+        shows.push({ box: a, items: a.querySelectorAll('img'), at: 0 });
+        pi++;
+      }
+    }
+    shows.forEach(function (sh, k) {
+      sh.items[0].classList.add('on');
+      sh.box.querySelectorAll('img').forEach(function (im) { im.loading = 'eager'; });
+      if (quiet) return;
+      setTimeout(function () {
+        setInterval(function () {
+          sh.items[sh.at].classList.remove('on');
+          sh.at = (sh.at + 1) % sh.items.length;
+          sh.items[sh.at].classList.add('on');
+        }, 3800);
+      }, k * 900);
+    });
+    if (shows.length && !quiet) {
+      var showWait = false;
+      var showDrift = function () {
+        showWait = false;
+        var vh = window.innerHeight;
+        shows.forEach(function (sh) {
+          var r = sh.box.getBoundingClientRect();
+          if (r.bottom < -60 || r.top > vh + 60) return;
+          var t = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);
+          if (t > 1) t = 1; else if (t < -1) t = -1;
+          var move = 'translate3d(0,' + (-t * r.height * 0.1).toFixed(1) + 'px,0)';
+          sh.box.querySelectorAll('img').forEach(function (im) { im.style.transform = move; });
+        });
+      };
+      window.addEventListener('scroll', function () { if (!showWait) { showWait = true; requestAnimationFrame(showDrift); } }, { passive: true });
+      showDrift();
+    }
+  }
 })();
