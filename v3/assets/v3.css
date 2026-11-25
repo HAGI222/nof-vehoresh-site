@@ -1114,3 +1114,8 @@ a.plant:focus-visible{outline:2px solid var(--olive);outline-offset:4px}
 .menu-open .hdr .burger,.menu-open .hdr .logo{pointer-events:auto}
 .menu-open .hdr .logo i,.menu-open .hdr .logo span{display:none}
 @media (prefers-reduced-motion:reduce){ .menu{transition:opacity .2s,visibility .2s;transform:none} }
+
+/* services page: the service name is the big title, and the sentence that used to be the title sits under it (Hagai 25.11) */
+.split h2.with-sub{margin-bottom:.3em}
+.split .sub-h{font-family:inherit;font-weight:500;font-size:clamp(19px,1.7vw,25px);line-height:1.38;color:var(--brown);margin:0 0 1em}
+.split.brown .sub-h{color:inherit;opacity:.94}
