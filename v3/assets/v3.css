@@ -543,3 +543,46 @@ body{font-family:var(--display);font-weight:400}
 .hdr .logo,.hdr .nav,.hdr > .cta{text-shadow:0 1px 10px rgba(0,0,0,.35)}
 .hdr.solid .logo,.hdr.solid .nav,.hdr.solid > .cta,.plain .hdr .logo,.plain .hdr .nav,.plain .hdr > .cta,.menu-open .hdr .logo{text-shadow:none}
 @media (max-width:767px){ .hdr::before{bottom:-70px} }
+
+/* planting strips, second take: narrower, with a much stronger movement behind (Hagai 25.11) */
+.drift{height:clamp(150px,19vw,290px)}
+.drift.live img{top:0;height:100%;will-change:transform}
+@media (max-width:767px){ .drift{height:40vw} }
+
+/* buttons: very slightly rounded corners (Hagai 25.11) */
+.btn,.btn-line,.cta,.menu a.cta{border-radius:5px}
+
+/* photos with rounded corners where they stand free of the page edge, as on terrarosa.org (Hagai 25.11) */
+:root{--round:14px}
+.team-pics figure,.person figure,.card figure,.work-pics a,.work-pics figure,.mosaic figure,.pop-box{border-radius:var(--round)}
+@media (max-width:767px){ :root{--round:10px} }
+
+/* first photo of every page: a soft dark wash and a vignette, so the top bar reads clearly (Hagai 25.11) */
+.hero::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse 120% 95% at 50% 58%,rgba(0,0,0,0) 42%,rgba(0,0,0,.42) 100%),linear-gradient(rgba(22,15,9,.14),rgba(22,15,9,.14))}
+
+/* buttons, final shape: fully rounded, as on terrarosa.org (Hagai 25.11; replaces the slight rounding above) */
+.btn,.btn-line,.cta,.menu a.cta{border-radius:999px}
+.btn{padding:15px 30px}
+.btn-line{padding:12px 28px}
+.cta{padding:6px 18px}
+.split .btn-line{margin-top:1.15em}
+.pop .btn-line{padding:15px 28px}
+
+/* questions and answers: rows with hairlines and a round plus mark, after the terrarosa.org pattern (Hagai 25.11) */
+.faq{background:var(--paper);padding:clamp(60px,6vw,100px) var(--gut) clamp(64px,6.4vw,108px)}
+.faq .kicker,.faq h2{text-align:center}
+.faq h2{margin-bottom:clamp(30px,3.4vw,52px)}
+.faq-list{max-width:900px;margin-inline:auto;border-top:1px solid rgba(139,105,78,.34)}
+.faq details{border-bottom:1px solid rgba(139,105,78,.34)}
+.faq summary{list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 4px;cursor:pointer;font-weight:700;font-size:clamp(19px,1.5vw,22px);letter-spacing:.03em;line-height:1.4;color:var(--ink)}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";flex:none;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--olive);color:var(--olive);background-color:transparent;background-image:linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor);background-size:13px 1.5px,1.5px 13px;background-position:center;background-repeat:no-repeat;transition:transform .25s ease,background-color .2s,color .2s}
+.faq summary:hover::after{background-color:var(--olive);color:var(--paper)}
+.faq details[open] summary::after{transform:rotate(45deg);background-color:var(--olive);color:var(--paper)}
+.faq summary:focus-visible{outline:2px solid var(--olive);outline-offset:3px}
+.faq .a{padding:0 4px 24px;padding-inline-end:58px;color:var(--soft)}
+@media (max-width:767px){
+  .faq summary{padding:18px 2px;gap:14px}
+  .faq .a{padding-inline-end:8px}
+}
+@media (prefers-reduced-motion:reduce){ .faq summary::after{transition:none} }

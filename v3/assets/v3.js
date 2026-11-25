@@ -147,7 +147,8 @@
     }
   }
 
-  // planting strips: the photo moves slower than the page while scrolling
+  // planting strips: a narrow window onto a tall photo that moves much slower than the page,
+  // so the planting is clearly seen sliding behind while scrolling
   var strips = document.querySelectorAll('.drift');
   var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (strips.length && !calm) {
@@ -155,12 +156,16 @@
     function drift() {
       waiting = false;
       var vh = window.innerHeight;
+      var k = window.innerWidth < 768 ? 0.5 : 0.62;      // share of the scroll the photo "stays behind"
       strips.forEach(function (el) {
         var r = el.getBoundingClientRect();
-        if (r.bottom < -80 || r.top > vh + 80) return;
-        var t = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2);   // 1 entering from below, -1 leaving at the top
-        if (t > 1) t = 1; else if (t < -1) t = -1;
-        el.firstElementChild.style.transform = 'translate3d(0,' + (-t * r.height * 0.2).toFixed(1) + 'px,0)';
+        if (r.bottom < -120 || r.top > vh + 120) return;
+        var img = el.firstElementChild;
+        var extra = k * (vh + r.height);
+        var p = (vh - r.top) / (vh + r.height);           // 0 entering from below, 1 leaving at the top
+        if (p < 0) p = 0; else if (p > 1) p = 1;
+        img.style.height = Math.ceil(r.height + extra) + 'px';
+        img.style.transform = 'translate3d(0,' + (-extra * (1 - p)).toFixed(1) + 'px,0)';
       });
     }
     function ask() { if (!waiting) { waiting = true; requestAnimationFrame(drift); } }
