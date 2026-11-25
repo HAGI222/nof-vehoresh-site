@@ -610,3 +610,47 @@ body{font-family:var(--display);font-weight:400}
   .cards-track .card{width:68vw;padding-inline:2.6vw}
 }
 @media (prefers-reduced-motion:reduce){ .cards-run{overflow-x:auto} .cards-track{animation:none} .cards-track .card[aria-hidden="true"]{display:none} }
+
+/* about page: the four facts as framed cards with a small line drawing each (Hagai 25.11) */
+.facts{gap:18px;padding-bottom:90px}
+.facts > div{background:var(--pale);border:1px solid rgba(139,105,78,.4);border-radius:var(--round);padding:32px 20px 30px}
+.facts .ico{display:grid;place-items:center;width:68px;height:68px;margin:0 auto 18px;border-radius:50%;background:var(--olive);color:var(--paper)}
+.facts .ico svg{width:38px;height:38px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.facts h3{font-size:clamp(21px,1.7vw,26px);margin-bottom:8px}
+@media (max-width:767px){ .facts{gap:14px;padding-bottom:60px} .facts > div{padding:26px 18px 24px} }
+
+.facts{padding-top:26px}
+
+/* gardens page: a grid of square cards with rounded photos, each opening its garden (after the terrarosa.org events page, Hagai 25.11) */
+.g-grid{background:var(--paper);padding:0 var(--gut) clamp(60px,6vw,100px);display:flex;flex-wrap:wrap;justify-content:center;gap:48px 16px}
+.g-card{flex:0 1 calc((100% - 48px)/4);min-width:0;text-align:center}
+.g-card .pic{display:block;aspect-ratio:1;overflow:hidden;border-radius:var(--round);background:#e6e0c6}
+.g-card img{width:100%;height:100%;object-fit:cover;transition:transform .9s ease}
+.g-card .pic:hover img{transform:scale(1.035)}
+.g-card h3{margin:18px 0 4px;font-size:clamp(19px,1.55vw,24px)}
+.g-card h3 a{text-decoration:none}
+.g-card p{margin:0 auto;max-width:28ch;font-size:16px;line-height:1.5;color:var(--soft)}
+.g-card .more{margin-top:14px;padding:10px 26px;font-size:15px}
+@media (max-width:1100px){ .g-card{flex-basis:calc((100% - 32px)/3)} }
+@media (max-width:767px){
+  .g-grid{gap:38px 10px}
+  .g-card{flex-basis:calc((100% - 10px)/2)}
+  .g-card h3{font-size:18px;margin-top:12px}
+  .g-card p{font-size:14.5px}
+  .g-card .more{padding:9px 20px;font-size:14.5px}
+}
+
+/* a garden's own page, for the gardens with smaller photos: heading, text, and a wall of photos */
+.g-page{background:var(--paper);text-align:center;padding:clamp(120px,10.5vw,160px) var(--gut) clamp(34px,3.6vw,54px)}
+.g-page h1{margin-bottom:.8em}
+.g-page .col{margin-inline:auto}
+.shots{background:var(--paper);padding:0 var(--gut) 30px;columns:3;column-gap:14px}
+.shots figure{margin:0 0 14px;break-inside:avoid;border-radius:var(--round);overflow:hidden;background:#e6e0c6}
+.shots img{display:block;width:100%;height:auto}
+.shots figcaption{background:var(--pale);padding:12px 16px 14px;font-size:15.5px;line-height:1.55;color:var(--soft)}
+@media (max-width:767px){
+  .g-page{padding-top:104px}
+  .shots{columns:2;column-gap:8px}
+  .shots figure{margin-bottom:8px}
+  .shots figcaption{padding:9px 11px 10px;font-size:14px}
+}
